@@ -1,0 +1,22 @@
+{
+  "name": "zello-bot",
+  "version": "1.0.0",
+  "description": "discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sovranb",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "discord.js": "^12.3.1",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "puppeteer": "^5.3.1",
+    "puppeteer-extra": "^3.1.15",
+    "puppeteer-extra-plugin-recaptcha": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.6.2",
+    "user-agents": "^1.0.559"
+  }
+}

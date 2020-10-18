@@ -1,0 +1,16 @@
+{
+    "BOT_TOKEN": "NzY3MDUzMzc5NzAwMTI5ODEz.X4sUIA.ep-Q1zXwhKvzZWUEZrt_NiQ9Ozc",
+	
+	"client_id": "767053379700129813",
+	"client_secret": "REjEdlWYck7DX4H-aJjMwn-704mJfUJ3",
+	"grant_type": "authorization_code",
+	"redirect_uri": "http://localhost:50451/api/discord/callback",
+	"code": "bymxq2k3qjCH8Z3ofIAx1RRdZnC9kb",
+	"scope": "identify connections bot messages.read",
+	"access_token": "97MP2tHMBbZypbpw98d81Wx89tAw1W",
+	
+	"chegg": {
+		"username": "abc",
+		"password": "123"
+	}
+}
