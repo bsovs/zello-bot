@@ -1,8 +1,39 @@
 const Discord = require("discord.js");
+const PORT = process.env.PORT || 8080, isLocal=(PORT===8080);
+const express = require('express'), path = require('path');
+const app = express(), http = require('http').Server(app);
 const fs = require('fs');
-const https = require('https');
 const config = require("./config.json");
 const {browser} = require('./browser');
+
+// Express Server
+
+http.listen(PORT, function(){
+	console.info('\x1b[32m','Listening on:', PORT);
+});
+
+errorMessage = (msg) => { return JSON.stringify({"error": `${msg}`}) }
+
+app.use(
+	express.static(path.join(__dirname, 'public'))
+);
+
+app.get('/ping', (req, res, next) => {
+	const options = {
+		url: API_URL + '/ping',
+		timeout: 10000,
+		method: 'GET'
+	};
+	request(options, function(err, _res, body) {
+		if(body){
+			res.send(body);
+		}else{
+			next(errorMessage(err));
+		}
+	});
+});
+
+// Discord Bot
 
 const client = new Discord.Client();
 
@@ -47,7 +78,7 @@ client.on('ready', () => {
 });
 
 //Start bot
-client.login(config.BOT_TOKEN);
+client.login(isLocal ? config.BOT_TOKEN_DEV : config.BOT_TOKEN);
 
 /*
 //Chegg Bot Setup

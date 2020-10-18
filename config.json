@@ -1,6 +1,7 @@
 {
     "BOT_TOKEN": "NzY3MDUzMzc5NzAwMTI5ODEz.X4sUIA.ep-Q1zXwhKvzZWUEZrt_NiQ9Ozc",
-	
+	"BOT_TOKEN_DEV": "NzY3NDQ4OTQ2NzI4NjMyMzcx.X4yEhw.uvUtdGxC5qVyNr1BMbC3pRAuAwY",
+
 	"client_id": "767053379700129813",
 	"client_secret": "REjEdlWYck7DX4H-aJjMwn-704mJfUJ3",
 	"grant_type": "authorization_code",
