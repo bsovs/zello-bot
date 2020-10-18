@@ -12,6 +12,7 @@
     "axios": "^0.20.0",
     "discord.js": "^12.3.1",
     "express": "^4.17.1",
+    "express-ping": "^1.4.0",
     "node-fetch": "^2.6.1",
     "puppeteer": "^5.3.1",
     "puppeteer-extra": "^3.1.15",

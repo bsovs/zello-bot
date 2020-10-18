@@ -1,37 +1,22 @@
 const Discord = require("discord.js");
 const PORT = process.env.PORT || 8080, isLocal=(PORT===8080);
-const express = require('express'), path = require('path');
+const express = require('express'), path = require('path'), health = require('express-ping');;
 const app = express(), http = require('http').Server(app);
 const fs = require('fs');
 const config = require("./config.json");
 const {browser} = require('./browser');
 
-// Express Server
+global.URL = isLocal ? `http://localhost:${PORT}` : 'https://zellobot.herokuapp.com';
 
+// Express Server
 http.listen(PORT, function(){
 	console.info('\x1b[32m','Listening on:', PORT);
 });
 
-errorMessage = (msg) => { return JSON.stringify({"error": `${msg}`}) }
-
+app.use(health.ping());
 app.use(
 	express.static(path.join(__dirname, 'public'))
 );
-
-app.get('/ping', (req, res, next) => {
-	const options = {
-		url: API_URL + '/ping',
-		timeout: 10000,
-		method: 'GET'
-	};
-	request(options, function(err, _res, body) {
-		if(body){
-			res.send(body);
-		}else{
-			next(errorMessage(err));
-		}
-	});
-});
 
 // Discord Bot
 
