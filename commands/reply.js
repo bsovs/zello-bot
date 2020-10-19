@@ -40,11 +40,11 @@ module.exports = {
 				.setURL(url)
 				.setTimestamp()
 				.setFooter('Credit @barndorn', avatar_url)
-			: null;
-		message.channel.send(message.author.toString(), {
-			embed: successEmbed,
-			files: (thumbnail.length>=1 ? thumbnail : [thumbnail])
-		});
+			: '';
+		let val = {};
+			if(hasCard) val.embed = successEmbed;
+			val.files = (Array.isArray(thumbnail) ? thumbnail : [thumbnail]);
+		message.channel.send(message.author.toString(), val);
 	},
 	table(message, list, isInline, header, description, thumbnail, url, color){
 		const getFields = (list) => {
