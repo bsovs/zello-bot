@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 const successGif = 'https://images-ext-2.discordapp.net/external/OVUlwF6n8j6wANCkwDzG_Rb2ivqCd9bRF10DC2Z8lS0/https/s5.gifyu.com/images/ezgif.com-optimized7ce94c5d4a783cb.gif';
 const errorGif = 'https://images-ext-1.discordapp.net/external/9yiAQ7ZAI3Rw8ai2p1uGMsaBIQ1roOA4K-ZrGbd0P_8/https/cdn1.iconfinder.com/data/icons/web-essentials-circle-style/48/delete-512.png?width=461&height=461';
-
+const avatar_url = 'https://cdn.discordapp.com/avatars/295320498806718464/07ccf87c408c6f5279939e70c3af314e.webp';
 
 module.exports = {
 	description: 'Responses by Zello-Bot',
@@ -14,7 +14,7 @@ module.exports = {
 			.setThumbnail(thumbnail!=null ? thumbnail : successGif)
 			.setURL(url)
 			.setTimestamp()
-			.setFooter('Credit @barndorn');
+			.setFooter('Credit @barndorn', avatar_url);
 		message.channel.send(message.author.toString(), {
 			embed: successEmbed
 		});
@@ -27,7 +27,7 @@ module.exports = {
 			.setThumbnail(thumbnail!=null ? thumbnail : errorGif)
 			.setURL(url)
 			.setTimestamp()
-			.setFooter('Credit @barndorn');
+			.setFooter('Credit @barndorn', avatar_url);
 		message.channel.send(message.author.toString(), {
 			embed: successEmbed
 		});
@@ -39,22 +39,27 @@ module.exports = {
 				.setDescription(description!=null ? description : '')
 				.setURL(url)
 				.setTimestamp()
-				.setFooter('Credit @barndorn')
+				.setFooter('Credit @barndorn', avatar_url)
 			: null;
 		message.channel.send(message.author.toString(), {
 			embed: successEmbed,
 			files: (thumbnail.length>=1 ? thumbnail : [thumbnail])
 		});
 	},
-	table(message, list, isInline, header){
+	table(message, list, isInline, header, description, thumbnail, url, color){
 		const getFields = (list) => {
 			if(typeof list !== 'object' || list == null) return list;
 			return list.map(item => {return ({ 'name': item.name, 'value': item.value, 'inline': isInline })})
 		};
 		const tableEmbed = new Discord.MessageEmbed()
+			.setColor(color)
+			.setURL(url!=null ? url : '')
 			.setTitle(header)
+			.setDescription(description!=null ? description : '')
+			.setThumbnail(thumbnail!=null ? thumbnail : '')
 			.addFields(getFields(list))
-			.setFooter('Credit @barndorn');
+			.setTimestamp()
+			.setFooter('Credit @barndorn', avatar_url);
 		message.channel.send({
 			embed: tableEmbed,
 		});
