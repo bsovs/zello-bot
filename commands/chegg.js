@@ -28,7 +28,7 @@ module.exports = {
 	description: 'Chegg Bot! Beep Boop.',
 	execute(message, args) {
 
-		var s = message.content.replace('!chegg', '')
+		var s = message.content.replace('!chegg', '');
 		
 		if (!s.includes('https://www.chegg.com/homework-help')) {
 			const errorEmbed = new Discord.MessageEmbed()

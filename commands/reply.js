@@ -51,7 +51,6 @@ module.exports = {
 			if(typeof list !== 'object' || list == null) return list;
 			return list.map(item => {return ({ 'name': item.name, 'value': item.value, 'inline': isInline })})
 		};
-		console.log(getFields(list));
 		const tableEmbed = new Discord.MessageEmbed()
 			.setTitle(header)
 			.addFields(getFields(list))
