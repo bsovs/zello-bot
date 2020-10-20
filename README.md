@@ -7,3 +7,4 @@
 
 *Rewards*
 * To set rewards for contributing code use ```!git -set [github username]``` in Zello Discord Server
+
