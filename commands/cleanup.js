@@ -2,10 +2,10 @@ const reply = require('./reply');
 
 module.exports = {
 	excluded: true,
-	name: 'gyazo',
-	description: 'Cleanup Gyazo Links',
+	name: 'cleanup',
+	description: 'Cleanup Stuff',
 	execute(message) {
-		message.delete();
-		reply.editLink(message);
+		//message.delete();
+		//reply.editLink(message);
 	}
 };

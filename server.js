@@ -39,15 +39,6 @@ for (const file of commandFiles) {
 
 client.on("message", function(message) {
 	if (message.author.bot) return;
-	
-	if (message.content.startsWith('https://')) {
-		const commandBody = message.content.slice('https://'.length);
-		const args = commandBody.split('.');
-		const command = args.shift().toLowerCase();
-		
-		client.commands.get(command).execute(message, args);
-	}
-	
 	if (!message.content.startsWith(prefix)) return;
 
 	const commandBody = message.content.slice(prefix.length);
