@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const successGif = 'https://images-ext-2.discordapp.net/external/OVUlwF6n8j6wANCkwDzG_Rb2ivqCd9bRF10DC2Z8lS0/https/s5.gifyu.com/images/ezgif.com-optimized7ce94c5d4a783cb.gif';
 const errorGif = 'https://images-ext-1.discordapp.net/external/9yiAQ7ZAI3Rw8ai2p1uGMsaBIQ1roOA4K-ZrGbd0P_8/https/cdn1.iconfinder.com/data/icons/web-essentials-circle-style/48/delete-512.png?width=461&height=461';
 const avatar_url = 'https://cdn.discordapp.com/avatars/295320498806718464/07ccf87c408c6f5279939e70c3af314e.webp';
+const zello_url = '';
 
 module.exports = {
 	description: 'Responses by Zello-Bot',
@@ -70,4 +71,7 @@ module.exports = {
 	to(message, user, description){
 		message.channel.send(user, description);
 	},
+	editLink(message){
+		message.channel.send(message.author.toString() + ' Gyazo is Deprecated, Please use ⌘+⇧+S', {files: [message.embeds[0].thumbnail.url]});
+	}
 };

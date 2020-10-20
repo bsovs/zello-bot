@@ -33,12 +33,21 @@ for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	if(command.name){
 		client.commands.set(command.name, command);
-		commandList.push({'name': command.name, 'description': command.description});
+		if(!command.excluded) commandList.push({'name': command.name, 'description': command.description});
 	}
 }
 
 client.on("message", function(message) {
 	if (message.author.bot) return;
+	
+	if (message.content.startsWith('https://')) {
+		const commandBody = message.content.slice('https://'.length);
+		const args = commandBody.split('.');
+		const command = args.shift().toLowerCase();
+		
+		client.commands.get(command).execute(message, args);
+	}
+	
 	if (!message.content.startsWith(prefix)) return;
 
 	const commandBody = message.content.slice(prefix.length);

@@ -7,5 +7,4 @@ module.exports = {
 		commands = commands.map(cmd => {return ({'name': `!${cmd.name}`, 'value': `${cmd.description}`})});
 		reply.table(message, commands, false, 'Commands:' );
 	}
-
 };
