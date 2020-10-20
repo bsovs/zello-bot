@@ -8,7 +8,6 @@ module.exports = {
 	name: 'priv',
 	execute(message, args) {
 		console.log('priv triggered', args);
-		
 		message.delete();
 		let members = message.channel.guild.members.cache;
 		let roles = message.channel.guild.roles.cache;
