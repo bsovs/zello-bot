@@ -3,8 +3,9 @@ const PORT = process.env.PORT || 8080, isLocal=(PORT===8080);
 const express = require('express'), path = require('path'), health = require('express-ping');;
 const app = express(), http = require('http').Server(app);
 const fs = require('fs');
-const config = require("./config.json");
 const {browser} = require('./browser');
+
+const config = isLocal ? require(".ignore/config.json") : null;
 
 global.URL = isLocal ? `http://localhost:${PORT}` : 'https://zellobot.herokuapp.com';
 
@@ -63,7 +64,7 @@ client.on('ready', () => {
 });
 
 //Start bot
-client.login(isLocal ? config.BOT_TOKEN_DEV : config.BOT_TOKEN);
+client.login(isLocal ? config.BOT_TOKEN_DEV : process.env.BOT_TOKEN);
 
 /*
 //Chegg Bot Setup
