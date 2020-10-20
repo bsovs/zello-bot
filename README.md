@@ -1,5 +1,5 @@
 # zello-bot
-*Zello Channel Discord Bot*
+*Beep Boop. Zello Channel Discord Bot*
 
 *Welcome Zello!*
 * All PRs are welcome
