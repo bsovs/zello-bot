@@ -5,7 +5,7 @@ const app = express(), http = require('http').Server(app);
 const fs = require('fs');
 const {browser} = require('./browser');
 
-const config = isLocal ? require(".ignore/config.json") : null;
+const config = isLocal ? require("./ignore/config.json") : null;
 
 global.URL = isLocal ? `http://localhost:${PORT}` : 'https://zellobot.herokuapp.com';
 
