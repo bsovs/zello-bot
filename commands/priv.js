@@ -1,7 +1,7 @@
 const reply = require('./reply');
 const isSetCmd = new RegExp("^-*(set)$");
-const ROLE_NAME = process.env.ROLE_NAME || 'admin';
-const ADMIN_KEY = process.env.ADMIN_KEY || 'b54jvryjYW8vtQkofJO6EUvDW6CVcles';
+const ROLE_NAME = process.env.ROLE_NAME;
+const ADMIN_KEY = process.env.ADMIN_KEY;
 
 module.exports = {
 	excluded: true,
