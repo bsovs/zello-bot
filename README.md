@@ -4,7 +4,7 @@
 <h2>Welcome Zello-U!</h2>
 <ul>
   <li>All changess are welcome </li>
-  <li>Check <code>example.js</code> for a template on create a command </li>
+  <li>Check <code>/examples</code> for a template on creating a command </li>
 </ul>
 <h2>Rewards</h2>
 <ul>
