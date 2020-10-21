@@ -10,4 +10,3 @@
 <ul>
   <li>To set rewards for contributing code use <code>!git -set [github username]</code> in Zello Discord Server </li>
 </ul>
-
