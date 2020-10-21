@@ -1,7 +1,8 @@
-# Config
-config.json
-config.*
+# Config Files
 ignore
+
+# Local Temp Documents
+docs
 
 # Logs
 logs
