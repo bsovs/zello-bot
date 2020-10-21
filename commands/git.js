@@ -11,7 +11,7 @@ module.exports = {
 		const isSetCmd = new RegExp("^-*(set)$");
 		
 		if(args.length >= 2 && isSetCmd.test(args[0])){
-			database.addOrUpdate('git', {"id": message.author.id}, {$set:{"id": message.author.id, "username": args[1]}}).then(result => {
+			database.addOrUpdate('git', {"id": message.author.id, "server_id": message.guild.id}, {$set:{"id": message.author.id, "server_id": message.guild.id, "username": args[1]}}).then(result => {
 				reply.success(message, `Your GitHub name has been set to ${args[1]}`, null);
 				init(message, message.author);
 			})

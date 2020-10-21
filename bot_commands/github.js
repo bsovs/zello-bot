@@ -12,7 +12,7 @@ module.exports = {
 		const embed = message.embeds[0];
 		if(!embed.title || embed.title.substring(embed.title.indexOf("["), embed.title.indexOf("]")+1) !== '[zello-bot:master]') return;
 		
-		database.find('git', {"username": embed.author.name}).then(user => {
+		database.find('git', {"username": embed.author.name, "server_id": message.guild.id}).then(user => {
 			if(user && user.id){
 				const members = message.channel.guild.members.cache;
 				const member = members.find(m => m.id === user.id);
