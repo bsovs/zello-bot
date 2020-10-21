@@ -1,10 +1,13 @@
 # zello-bot
 *Beep Boop. Zello Channel Discord Bot*
 
-*Welcome Zello!*
-* All PRs are welcome
-* Check ```example.js``` for a template on create a command
-
-*Rewards*
-* To set rewards for contributing code use ```!git -set [github username]``` in Zello Discord Server
+<h2>Welcome Zello!</h2>
+<ul>
+  <li>All PRs are welcome </li>
+  <li>Check <code>example.js</code> for a template on create a command </li>
+</ul>
+<h2>Rewards</h2>
+<ul>
+  <li>To set rewards for contributing code use <code>!git -set [github username]</code> in Zello Discord Server </li>
+</ul>
 
