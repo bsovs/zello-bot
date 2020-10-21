@@ -1,7 +1,7 @@
 # zello-bot
 *Beep Boop. Zello Channel Discord Bot*
 
-<h2>Welcome Zello!</h2>
+<h2>Welcome Zello-U!</h2>
 <ul>
   <li>All changess are welcome </li>
   <li>Check <code>example.js</code> for a template on create a command </li>
