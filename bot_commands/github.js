@@ -1,6 +1,7 @@
 const reply = require('../commands/reply');
 const fs = require('fs');
 const database = require('../database');
+const zbucks = require('../commands/zbucks');
 
 const git = [{"id": "295320498806718464", "name": "sovranb"}];
 
@@ -17,6 +18,7 @@ module.exports = {
 				const member = members.find(m => m.id === user.id);
 				if(member){
 					reply.basic(message, `${member} Received Action from GitHub: ${embed.description}`);
+					zbucks.add(message, user, 1000);
 				}else{
 					reply.basic(message, `Error getting Discord profile for: ${embed.author.name}`);
 				}

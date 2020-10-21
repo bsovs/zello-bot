@@ -34,10 +34,10 @@ module.exports = {
 			.catch(error => reject(error))
 		);
 	},
-	add(tableName, id, newValue) {
+	addOrUpdate(tableName, id, command) {
 		return new Promise((resolve, reject) => 
 			this.connect().then((client) => {
-				client.db("zello").collection(tableName).updateOne(id, {$set: newValue}, { upsert: true }, function(err, result) {
+				client.db("zello").collection(tableName).updateOne(id, command, { upsert: true }, function(err, result) {
 					if(err) reject(err);
 					resolve(result);
 				});
