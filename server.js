@@ -8,6 +8,7 @@ const {browser} = require('./browser');
 const config = isLocal ? require("./ignore/config.json") : null;
 
 global.URL = isLocal ? `http://localhost:${PORT}` : 'https://zellobot.herokuapp.com';
+global.isLocal = isLocal;
 
 // Express Server
 http.listen(PORT, function(){
@@ -25,11 +26,10 @@ const client = new Discord.Client();
 
 const prefix = "!";
 
-//setup bot commands
+//setup commands
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 let commandList = [];
-
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	if(command.name){
@@ -37,8 +37,23 @@ for (const file of commandFiles) {
 		if(!command.excluded) commandList.push({'name': command.name, 'description': command.description});
 	}
 }
+//bot commands
+client.botCommands = new Discord.Collection();
+const botCommandFiles = fs.readdirSync('./bot_commands').filter(file => file.endsWith('.js'));
+let botCommandList = [];
+for (const file of botCommandFiles) {
+	const command = require(`./bot_commands/${file}`);
+	if(command.name){
+		client.botCommands.set(command.name, command);
+		botCommandList.push({'name': command.name, 'description': command.description});
+	}
+}
 
+//on message do
 client.on("message", function(message) {
+	if (message.webhookID) message.fetchWebhook().then(res => {
+		try{client.botCommands.get(message.author.username).execute(message)}catch{}
+	});
 	if (message.author.bot) return;
 	if (!message.content.startsWith(prefix)) return;
 
