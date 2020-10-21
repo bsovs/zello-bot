@@ -65,6 +65,27 @@ module.exports = {
 			embed: tableEmbed,
 		});
 	},
+	bank(message, description, thumbnail, accounts, isToUser){
+		const getFields = (list) => {
+			if(typeof list !== 'object' || list == null) return list;
+			return list.map(item => {return ({ 'name': item.name, 'value': item.value, 'inline': true })})
+		};
+		const bankEmbed = new Discord.MessageEmbed()
+			.setColor('#FFD700')
+			.setURL('')
+			.setTitle('Zello Bank')
+			.setDescription(description!=null ? description : '')
+			.setThumbnail(thumbnail!=null ? thumbnail : '')
+			.addFields(getFields(accounts))
+			.setTimestamp()
+			.setFooter('Bank of Zello ©');
+		message.channel.send(
+			isToUser ? message.author : '',
+			{
+				embed: bankEmbed,
+			}
+		);
+	},
 	basic(message, description){
 		message.channel.send(description);
 	},
