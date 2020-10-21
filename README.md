@@ -18,3 +18,8 @@
   <li>Create commands in <code>/commands</code> folder using the example template</li>
   <li>Pull this repo and run locally using your own discord bot token, or ask @bsovs for dev token</li>
 </ul>
+
+<h2>Commands</h2>
+<ul>
+  <li>Use !help for list of commands</li>
+</ul>
