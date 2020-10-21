@@ -19,7 +19,7 @@ module.exports = {
 	},
 	async add(message, user, amount) {
 		database.addOrUpdate('zbucks', {"id": user.id}, {$inc:{"zbucks": amount}}).then(result => {
-			if(result) reply.success(message, `${amount} Z-Bucks Added to ${user.name}'s Account`, null);
+			if(result) reply.success(message, `${amount} Z-Bucks Added to ${user.username}'s Account`, null);
 		})
 		.catch(error => {
 			console.log(error);
@@ -33,7 +33,7 @@ module.exports = {
 		})
 		.catch(error => {
 			console.log(error);
-			reply.error(message, `Failed to Initalize Account for ${user.name}`, null);
+			reply.error(message, `Failed to Initalize Account for ${user.username}`, null);
 		});
 	}
 };
