@@ -1,50 +1,10 @@
 const fs = require('fs');
-const {hasError, tryTo} = require('./validation');
 const reply = require('./reply');
 const puppeteer = require('puppeteer');
 const browser = require('../browser');
 const doc_path = './docs/temp';
 
 let getUrl = (username) => {return `https://na.op.gg/summoner/userName=${username}`};
-
-let getImage = async(username_url, id, element_name, num) => {
-	const page = await global.browser.newPage();
-	await page.goto(username_url, { waitUntil: "networkidle0", timeout: 60000 });
-	//await page.setViewport({ width: 1024, height: 800 });
-	await page.waitForSelector(element_name!=null ? element_name : '.GameListContainer');          // wait for the selector to load
-	let elements = await page.$$(element_name!=null ? element_name : '.GameListContainer'); 
-	num = (num==null ? 1 : num);
-	for (let i = 0; i < num; i++) {
-		try {
-			// get screenshot of a particular element
-			await elements[i].screenshot({
-				path: `${doc_path}/screenshot${id}_${i}.png`,
-				type: "png"
-			});
-		} catch(e) {
-			// if element is 'not visible', spit out error and continue
-			console.log(`couldnt take screenshot of element with index: ${i}. cause: `,  e)
-	  }
-	}
-	await page.close();
-	
-	let retun_urls = [];
-	for (let i = 0; i < num; i++) {
-		retun_urls.push(`${doc_path}/screenshot${id}_${i}.png`);
-	}
-	return retun_urls;
-};
-
-let refresh = async(username_url) => {
-	const page = await global.browser.newPage();
-	await page.goto(username_url, { waitUntil: "networkidle0", timeout: 60000 });
-	await page.waitForSelector('[id="SummonerRefreshButton"]');          // wait for the selector to load
-	let button = await page.$('[id="SummonerRefreshButton"]');
-	await button.click();
-	await page.close();
-
-	return true;
-};
 
 module.exports = {
 	name: 'opgg',
@@ -74,7 +34,7 @@ module.exports = {
 			else if (isRefreshCmd.test(args[0])){
 				if(parseJson[message.author.id]){
 					let username_url = getUrl(parseJson[message.author.id].username);
-					await refresh(username_url);
+					await browser.refresh(username_url);
 					reply.success(message, `Your OP.GG has been refreshed`, null, username_url);
 				}
 				else{
@@ -89,7 +49,7 @@ module.exports = {
 							let resultValue = {text: null, image: null};
 							resultValue.id = parseJson[user.id].username;
 							resultValue.text = `${user.username}'s OP.GG: ` + username_url;
-							resultValue.image = await getImage(username_url, resultValue.id);
+							resultValue.image = await browser.getImage(username_url, resultValue.id);
 							opggList.push(resultValue);
 						}
 						else{
@@ -102,13 +62,13 @@ module.exports = {
 						if(parseJson[message.author.id]){
 							let username_url = getUrl(parseJson[message.author.id].username);
 							if (args.length===1 && isLastCmd.test(args[0])){
-								reply.image(message, false, null, null, await getImage(username_url, parseJson[message.author.id].username, '.GameItemWrap', args[0].replace(new RegExp("^-*"),'')))
+								reply.image(message, false, null, null, await browser.getImage(username_url, parseJson[message.author.id].username, '.GameItemWrap', args[0].replace(new RegExp("^-*"),'')))
 							}
 							else{
 								let resultValue = {text: null, image: null};
 								resultValue.id = parseJson[message.author.id].username;
 								resultValue.text = `${message.author.username}'s OP.GG: ${username_url}`;
-								resultValue.image = await getImage(username_url, resultValue.id);
+								resultValue.image = await browser.getImage(username_url, resultValue.id);
 								opggList.push(resultValue);
 							}
 						}

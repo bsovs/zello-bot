@@ -80,6 +80,13 @@ class App extends Component {
 
 				<SwipeableViews enableMouseEvents>
 					<Card
+						value="Swipe Card -> "
+					/>
+					<Card
+						value="Another Card"
+					/>
+					<Card
+						value="Another one..."
 					/>
 				</SwipeableViews>
 

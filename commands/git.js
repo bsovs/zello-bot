@@ -1,13 +1,12 @@
 const fs = require('fs');
 const reply = require('./reply');
 const database = require('../database');
-const doc_path = './docs/temp';
-const {init} = require('../commands/zbucks');
+const {init} = require('./zbucks');
 
 module.exports = {
 	name: 'git',
 	description: 'Git Commands in Discord',
-	async execute(message, args) {
+	execute(message, args) {
 		const isSetCmd = new RegExp("^-*(set)$");
 		
 		if(args.length >= 2 && isSetCmd.test(args[0])){

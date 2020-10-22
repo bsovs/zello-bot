@@ -4,7 +4,6 @@ const PORT = process.env.PORT || 8080, isLocal=(PORT===8080);
 const express = require('express'), path = require('path'), health = require('express-ping');;
 const app = express(), http = require('http').Server(app);
 const io = require('socket.io')(http), socket = require('./socket.io/socket');
-const {browser} = require('./browser');
 
 const config = isLocal ? require("./ignore/config.json") : null;
 
@@ -77,7 +76,8 @@ client.on("message", function(message) {
 		}
 	} catch (error) {
 		console.error(error);
-		message.reply('there was an error trying to execute that command!');
+		errorMsg = error ? `Error: ${error}`: '';
+		message.reply(`there was an error trying to execute that command! \n ${errorMsg}`);
 	}
 });
 client.on('ready', () => {

@@ -7,7 +7,8 @@ const doc_path = './docs/temp';
 const pickem_url = 'https://pickem.lolesports.com/#series/7/user/8258672/leaderboards/list/900721';
 
 let getImage = async() => {
-	const page = await global.browser.newPage();
+	const browser = await browser.openBrowser();
+	const page = await browser.newPage();
 	await page.goto(pickem_url, { waitUntil: "networkidle0", timeout: 60000 });
 	await page.setViewport({ width: 2024, height: 800 });
 	await page.waitForSelector('.leaderboards-content');
@@ -22,6 +23,7 @@ let getImage = async() => {
 		console.log(`couldnt take screenshot of element cause: `,  e)
 	}
 	await page.close();
+	await browser.close();
 
 	return `${doc_path}/screenshot_pickems.png`;
 };
