@@ -27,7 +27,7 @@ module.exports = {
 			this.connect().then((client) => {
 				client.db("zello").collection(tableName).findOne(value, function(err, result) {
 					if(err) reject(err);
-					resolve(result);
+					else resolve(result);
 				});
 				client.close();
 			})
@@ -39,7 +39,7 @@ module.exports = {
 			this.connect().then((client) => {
 				client.db("zello").collection(tableName).updateOne(id, command, { upsert: true }, function(err, result) {
 					if(err) reject(err);
-					resolve(result);
+					else resolve(result);
 				});
 				client.close();
 			})

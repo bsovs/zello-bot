@@ -18,9 +18,7 @@ class Card extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-
-		}
+		this.state = props;
 	}
 
 	componentDidMount() {
@@ -29,10 +27,12 @@ class Card extends Component {
 
 	render(){
 
-		const { } = this.state;
+		const { value } = this.state;
 
 		return(
-			<h2>This is a card</h2>
+			<React.Fragment>
+				<h2>{value}</h2>
+			</React.Fragment>
 		);
 	}
 }
