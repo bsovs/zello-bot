@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const doc_path = './docs/temp';
 
 module.exports = {
 	async openBrowser(){

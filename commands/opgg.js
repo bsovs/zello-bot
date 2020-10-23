@@ -17,8 +17,8 @@ module.exports = {
 		
 		var parseJson = {};
 		fs.readFile(OPGG_JSON, async(error, content) => {
-			if(!hasError(error)){
-				parseJson = tryTo(() => JSON.parse(content));
+			if(!error){
+				try{parseJson = JSON.parse(content);}catch(e){};
 			}
 			
 			let opggList = [];
@@ -28,7 +28,7 @@ module.exports = {
 			if(args.length >= 2 && isSetCmd.test(args[0])){
 				parseJson[message.author.id] = {"username": args[1]};
 				fs.writeFile(OPGG_JSON, JSON.stringify(parseJson), (error) => {
-					if(!hasError(error)) reply.success(message, `Your OP.GG has been set to ${unescape(args[1])}`, null, getUrl(args[1]));
+					if(!error) reply.success(message, `Your OP.GG has been set to ${unescape(args[1])}`, null, getUrl(args[1]));
 				});
 			}
 			else if (isRefreshCmd.test(args[0])){

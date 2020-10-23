@@ -22,7 +22,7 @@ module.exports = {
 		}
 		return {flags, flagList};
 	},
-	checkFlags(message, args, flagBody){
+	checkFlags(message, args, flagBody, parent){
 		if (!args[0].startsWith(module.exports.prefix)) throw 'invalid flag syntax. please use - infront of flags.';
 		const command = args.shift().toLowerCase().slice(module.exports.prefix.length);
 		
@@ -33,7 +33,7 @@ module.exports = {
 			}
 			else{
 				args.shift();
-				flagBody.flags.get(command).execute(message, args);
+				flagBody.flags.get(command).execute(message, args, parent);
 			}
 		} catch (error) {
 			throw 'flag error -> ' + error;
