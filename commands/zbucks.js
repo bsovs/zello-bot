@@ -3,16 +3,19 @@ const database = require('../database');
 const flagService = require('./services/flagService');
 const flagBody = flagService.execute('zbucks_flags');
 
+const EMPTY_ACCOUNT = {"id": null, "username": null, "server_id": null, "zbucks": 0};
+
 module.exports = {
 	name: 'zbucks',
 	description: 'Find out how many z-bucks you have',
+	emptyAccount: EMPTY_ACCOUNT,
 	execute(message, args) {
 		if (!args[0]) {
 			module.exports.list(message);
 		}
 		else{	
 			try{
-				flagService.checkFlags(message, args, flagBody);
+				flagService.checkFlags(message, args, flagBody, module.exports);
 			}
 			catch(error){throw error}
 		}
@@ -47,5 +50,12 @@ module.exports = {
 			console.log(error);
 			reply.error(message, `Failed to Initalize Account for ${user.username}`, null);
 		});
+	},
+	newAccount(message){
+		let account = module.exports.emptyAccount;
+		account.id = message.author.id;
+		account.username = message.author.username;
+		account.server_id = message.guild.id;
+		return account;
 	}
 };
