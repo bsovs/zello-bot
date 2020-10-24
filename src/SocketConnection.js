@@ -28,7 +28,7 @@ class SocketConnection extends Component {
 
 		if (isWeb && !socketConnected){
 			return (
-				<div class="alert alert-dismissible  show" role="alert">
+				<div className="alert alert-dismissible  show" role="alert">
 					<FontAwesomeIcon icon={faExclamationTriangle} size="1x" />
 					<strong>Internet not Connected</strong>
 				</div>

@@ -1,7 +1,7 @@
 /* defaults to light theme */
 body {
   --text-color: #121212;
-  --bkg-color: #fff;
+  --bkg-color: #EEEEEE;
   --btn-color: #b082ff;
   --btn-border-text-color: #ffffff;
   --filter: brightness(90%);
@@ -46,7 +46,7 @@ body {
 	transition: background 0.50s ease;
 }
 
-h1, p, div {
+h1, p {
 	color: var(--text-color);
 	transition: color 0.9s ease;
 	text-transform:uppercase;

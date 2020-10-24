@@ -3,7 +3,7 @@ const database = require('../../database');
 
 module.exports = {
 	name: 'claim',
-	description: 'Claim 100 Z-Bucks Every 24h',
+	description: 'Claim 100 Z-Bucks Every 24h. Resets every night at 8pm',
 	claimAmount: 100,
 	execute(message, args, parent) {
 		const claimAmount = module.exports.claimAmount;

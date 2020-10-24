@@ -62,7 +62,7 @@ module.exports = {
 						if(parseJson[message.author.id]){
 							let username_url = getUrl(parseJson[message.author.id].username);
 							if (args.length===1 && isLastCmd.test(args[0])){
-								reply.image(message, false, null, null, await browser.getImage(username_url, parseJson[message.author.id].username, '.GameItemWrap', args[0].replace(new RegExp("^-*"),'')))
+								reply.imageAndCard(message, false, null, null, await browser.getImage(username_url, parseJson[message.author.id].username, '.GameItemWrap', args[0].replace(new RegExp("^-*"),'')))
 							}
 							else{
 								let resultValue = {text: null, image: null};
@@ -88,7 +88,7 @@ module.exports = {
 					}
 				}
 				console.log(opggList);
-				opggList.map(opgg => reply.image(message, true, opgg.text, null, opgg.image));
+				opggList.map(opgg => reply.imageAndCard(message, true, opgg.text, null, opgg.image));
 			} 
 		});
 	}
