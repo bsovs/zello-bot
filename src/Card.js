@@ -6,8 +6,6 @@ import { Button, Spinner, Form, Input } from 'react-bootstrap';
 import {isMobile} from 'react-device-detect';
 
 import logo from './Styles/logo.svg';
-import './Styles/App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import ThemeButton from './ThemeButton';
 import SocketConnection from './SocketConnection';

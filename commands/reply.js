@@ -33,7 +33,12 @@ module.exports = {
 			embed: successEmbed
 		});
 	},
-	image(message, hasCard, title, description, thumbnail, url){
+	image(message, url){
+		let val = {};
+			val.files = (Array.isArray(url) ? url : [url]);
+		message.channel.send(val);
+	},
+	imageAndCard(message, hasCard, title, description, thumbnail, url){
 		const successEmbed = hasCard ? new Discord.MessageEmbed()
 				.setColor('#5383e8')
 				.setTitle(title)

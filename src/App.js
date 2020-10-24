@@ -6,7 +6,7 @@ import { Button, Spinner, Form, Input } from 'react-bootstrap';
 import {isMobile} from 'react-device-detect';
 
 import logo from './Styles/logo.svg';
-import './Styles/App.css';
+import './Styles/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SwipeableViews from 'react-swipeable-views';
 
@@ -15,6 +15,8 @@ import ThemeButton from './ThemeButton';
 import SocketConnection from './SocketConnection';
 import { http } from './httpFactory';
 import { socket } from './Config/config';
+import CodeEditor from './CodeEditor';
+import CodeEditorV2 from './CodeEditorV2';
 
 class App extends Component {
 
@@ -78,17 +80,9 @@ class App extends Component {
 				
 				<h1>Zello Bot</h1>
 
-				<SwipeableViews enableMouseEvents>
-					<Card
-						value="Swipe Card -> "
-					/>
-					<Card
-						value="Another Card"
-					/>
-					<Card
-						value="Another one..."
-					/>
-				</SwipeableViews>
+				<CodeEditorV2 
+					isDark={this.state.isDark}
+				/>
 
 			</main>
 			<footer>
@@ -100,3 +94,9 @@ class App extends Component {
     );}
 }
 export default App;
+
+/*
+				<SwipeableViews enableMouseEvents>
+					<Card value="hello world card!"/>
+				</SwipeableViews>
+				*/

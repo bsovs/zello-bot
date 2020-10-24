@@ -33,6 +33,6 @@ module.exports = {
 	description: 'Get Zello World\'s Bracket',
 	async execute(message, args) {
 		let image = await getImage();
-		reply.image(message, true, 'Zello World\'s Bracket', null, image, pickem_url)
+		reply.imageAndCard(message, true, 'Zello World\'s Bracket', null, image, pickem_url)
 	}
 };

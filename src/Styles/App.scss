@@ -1,16 +1,15 @@
 html, body {
 	background-color: #121212;
-	color: #eee;
 	font-family: Helvetica, Arial;
 	font-size: 3vmin;
+	height: 100%;
 }
 
 .App {
 	display: grid;
-	height: 100vh;
+	height: 100%;
 	grid-template: auto 1fr auto / auto 1fr auto;
 	font-size: calc(10px + 2vmin);
-	color: white;
 	text-align: center;
 }
 
