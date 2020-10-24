@@ -1,0 +1,54 @@
+/* Page */
+
+.code-editor {
+  width: 90vw;
+  max-width: 900px;
+  min-height: 300px; 
+  max-height: calc(100% - 30px);
+  
+  margin: auto;
+  position: relative;
+  background: var(--color-box-bg);
+
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  
+  font-family: 'Fira code', 'Fira Mono', Consolas, Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.playground {
+  text-align:left;
+}
+
+.editor-header {
+  height: 30px;
+  content: attr(title);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.iframe {
+	margin: auto;
+	position: relative;
+	background: var(--color-box-bg);
+	box-shadow: none;
+	border: none;
+	filter: none;
+	font-family: 'Fira code', 'Fira Mono', Consolas, Menlo, Courier, monospace;
+	font-size: 12px;
+	height: 100px;
+	width:30vw;
+}
+
+.result {
+	padding: 20px;
+	label{
+		text-transform: uppercase;
+		color: var(--text-color);
+		display: inline-block;
+		vertical-align: top;
+	}
+}
