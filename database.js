@@ -1,10 +1,7 @@
-const config = global.isLocal ? require('./ignore/secret.json') : {};
-
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
-const url = "mongodb://localhost:27017/";
 
-const DB_PASS = process.env.DB_PASS || config.DB_PASS;
+const DB_PASS = process.env.DB_PASS || require('./ignore/secret.json').DB_PASS;
 
 module.exports = {
 	name: 'mongodb',
@@ -24,7 +21,7 @@ module.exports = {
 	},
 	find(tableName, value) {	
 		return new Promise((resolve, reject) => 
-			this.connect().then((client) => {
+			module.exports.connect().then((client) => {
 				client.db("zello").collection(tableName).findOne(value, function(err, result) {
 					if(err) reject(err);
 					else resolve(result);
@@ -36,7 +33,7 @@ module.exports = {
 	},
 	addOrUpdate(tableName, id, command) {
 		return new Promise((resolve, reject) => 
-			this.connect().then((client) => {
+			module.exports.connect().then((client) => {
 				client.db("zello").collection(tableName).updateOne(id, command, { upsert: true }, function(err, result) {
 					if(err) reject(err);
 					else resolve(result);
@@ -45,11 +42,17 @@ module.exports = {
 			})
 			.catch(error => reject(error))
 		);
-		
-		dbo.collection("customers").updateOne(myquery, newvalues, function(err, res) {
-			if (err) throw err;
-			console.log("1 document updated");
-			db.close();
-		});
+	},
+	add(tableName, id, command) {
+		return new Promise((resolve, reject) => 
+			module.exports.connect().then((client) => {
+				client.db("zello").collection(tableName).insertOne(id, command, function(err, result) {
+					if(err) reject(err);
+					else resolve(result);
+				});
+				client.close();
+			})
+			.catch(error => reject(error))
+		);
 	}
 }

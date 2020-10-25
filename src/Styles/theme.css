@@ -71,6 +71,7 @@ a:hover {
 .btn {
 	color: var(--btn-color);
 	filter: var(--filter);
+	background: transparent;
 }
 .btn:hover {
 	color:  var(--text-color);
