@@ -1,10 +1,9 @@
-﻿import React, { Component } from "react";
+import React, { Component } from "react";
 import * as $ from "jquery";
 import { Capacitor } from '@capacitor/core';
 import { Link } from "react-router-dom";
 import { Button, Spinner, Form, Input } from 'react-bootstrap';
 import {isMobile} from 'react-device-detect';
-import Cookies from 'universal-cookie';
 
 import logo from './Styles/logo.svg';
 import './Styles/App.scss';
@@ -16,20 +15,17 @@ import ThemeButton from './ThemeButton';
 import SocketConnection from './SocketConnection';
 import { http } from './httpFactory';
 import { socket } from './Config/config';
+import CodeEditorV2 from './CodeEditorV2';
+import Bet from './Bet/Bet';
 
-//Global Vars
-const cookies = new Cookies();
-
-class App extends Component {
+class BetParent extends Component {
 
 	constructor(props) {
 		super(props);
-		let JWT = cookies.get('JWT', {doNotParse: true});
 		this.state = {
 			isDark: false,
 			isWeb: Capacitor.platform==='web',
-			socketConnected: true,
-			JWT: JWT!=='' ? JWT : null,
+			socketConnected: true
 		}
 	}
 
@@ -82,35 +78,17 @@ class App extends Component {
 			</header>
 			<main>
 				
-				<h1>Zello Bot</h1>
-				
-				{this.state.JWT && (
-					<Link to="/lol-bets">
-						LOL BETS
-					</Link>
-				)}
-				<a href="/login">
-					LOGIN
-				</a>
+				<h1>Zello Bets</h1>
+
+				<Bet />
 
 			</main>
 			<footer>
 				<p>
-					Created by Barndo @ ZELLO
+					Bank of Zello co.
 				</p>
 			</footer>
       </div>
     );}
 }
-export default App;
-
-/*
-				<SwipeableViews enableMouseEvents>
-					<Card value="hello world card!"/>
-				</SwipeableViews>
-				
-				<CodeEditorV2 
-					isDark={this.state.isDark}
-				/>
-				
-				*/
+export default BetParent;
