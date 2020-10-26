@@ -9,7 +9,6 @@ module.exports = {
 	prefix: '-',
 	execute(moduleName) {
 		//setup flag commands
-		console.log(moduleName);
 		let flags = new Discord.Collection();
 		const flagFiles = fs.readdirSync(`./commands/${moduleName}`).filter(file => file.endsWith('.js'));
 		let flagList = [];
