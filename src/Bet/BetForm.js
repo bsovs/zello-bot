@@ -41,15 +41,19 @@ class BetForm extends Component {
 	return (
 		<React.Fragment>
 		{this.state.loading
-			?(<div className="loading">
+			?(
+			<div className="loading">
 				<Spinner
+				  id="spinner"
 				  as="span"
 				  animation="border"
 				  size={isMobile ? "1x" : "sm"}
 				  role="status"
 				  aria-hidden="true"
 				/>
-			</div>)
+				<p>This may take ~30sec</p>
+			</div>
+			)
 		:(
 			<Form onSubmit={this.submitForm}>
 				<Form.Group controlId="formBasicText">

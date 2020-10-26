@@ -61,7 +61,7 @@ start(app){
 		});
 	});
 
-	router.get('/login', (req, res) => {
+	router.get('/api/discord', (req, res) => {
 		console.log(req.cookies);
 		if(!req.cookies || !req.cookies.discord_token || req.cookies.discord_token.maxAge < Date.now()){
 			if(req.cookies && req.cookies.discord_refresh_token) refreshToken(req, res, req.cookies.discord_refresh_token);
