@@ -1,11 +1,6 @@
-html, body {
-	background-color: #121212;
-	font-family: Helvetica, Arial;
-	font-size: 3vmin;
-	height: 100%;
-}
 
 .App {
+	font-family: Helvetica, Arial;
 	display: grid;
 	height: 100%;
 	grid-template: auto 1fr auto / auto 1fr auto;

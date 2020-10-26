@@ -89,8 +89,8 @@ class App extends Component {
 						LOL BETS
 					</Link>
 				)}
-				<a href="/login">
-					LOGIN
+				<a href="/api/discord">
+					Authorize App
 				</a>
 
 			</main>

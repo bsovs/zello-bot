@@ -16,7 +16,7 @@ class httpFactory {
 			$.ajax({
 				url: API_URL + `/lol/setBet?summoner=${summoner}&wager=${wager}&isWin=${isWin}`,
 				type: "POST",
-				timeout: 15000,
+				timeout: 30000,
 				success: (data) => {
 					resolve(JSON.parse(data));
 				},
