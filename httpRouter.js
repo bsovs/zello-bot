@@ -126,8 +126,8 @@ start(app){
 			}
 		};
 		request(options, function(err, _res, body) {
-			if(body) setBet(body, params, req, res, next);
-			else next(errorMessage(err));
+			if(body && body.accountId) setBet(body, params, req, res, next);
+			else res.status(400).send(err);
 		});
 	});
 	
