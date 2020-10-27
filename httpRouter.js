@@ -126,7 +126,8 @@ start(app){
 			}
 		};
 		request(options, function(err, _res, body) {
-			if(body && body.accountId) setBet(body, params, req, res, next);
+			console.log(_res);
+			if(body && _res.statusCode===200) setBet(body, params, req, res, next);
 			else res.status(400).send(err);
 		});
 	});
@@ -144,11 +145,11 @@ start(app){
 						const accountId = lolParams.accountId;
 						const betTime = new Date().getTime();
 						const betId = data.id+'_'+accountId+'_'+betTime+'_'+!!params.isWin;
-						const betSpecs = {"bet_time": betTime, "account_id": accountId, "wager": params.wager, "is_win": !!params.isWin};
+						const betSpecs = {"bet_time": betTime, "account_id": accountId, "lol_name": lolParams.name, "wager": params.wager, "is_win": !!params.isWin};
 						
 						database.add('lol_bets', {"id":  data.id, "username":  account.username, "bet_id": betId, "bet_specs": betSpecs}, {})
 							.then(result => {
-								let parsed = safelyParseJSON(body)
+								let parsed = lolParams;
 								parsed.betSpecs = betSpecs;
 								
 								database.addOrUpdate('zbucks', {"id": data.id}, {$inc:{"zbucks": parseInt(params.wager)*(-1)}}).then(result => {
@@ -172,31 +173,39 @@ start(app){
 	}
 	
 	app.post('/lol/checkBet', (req, res, next) => {
-		const params = req.query;
-		const accountId = params.accountId;
-		const userId = params.userId;
-		const betId = params.betId;
-		
-		database.find('lol_bets', {"bet_id": betId}).then(bet => {
-			if(bet){	
-				const options = {
-					url: `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?beginTime={bet.bet_time}`,
-					timeout: 15000,
-					method: 'GET',
-					headers: {
-						"User-Agent": "node.js",
-						"X-Riot-Token": RITO_KEY
-					}
-				};
-				request(options, function(err, _res, body) {
-					if(body) res.send(body);
-					else next(errorMessage(err));
-				});
-			}
-			else next('error');
-		})
+		if(!req.cookies || !req.cookies.discord_token){ res.status(401).send('Not Authorized'); return;}
+		oauth2.getUserId(req, res, req.cookies.discord_token)
+			.then((data)=>{
+				if(data){
+					database.find('lol_bets', {"id": data.id}).then(bet => {
+						if(bet){	
+							const options = {
+								url: `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?beginTime={bet.bet_time}`,
+								timeout: 15000,
+								method: 'GET',
+								headers: {
+									"User-Agent": "node.js",
+									"X-Riot-Token": RITO_KEY
+								}
+							};
+							request(options, function(err, _res, body) {
+								if(body && _res.statusCode===200) {
+									matchData = safelyParseJSON(body);
+									res.send(matchData);
+								}
+								else res.status(404).send('Match not played yet');
+							});
+						}
+						else next('error');
+					})
+					.catch(error => {
+						next('error');
+					});
+				}
+				else res.status(404).send('No Account on File');
+			})
 		.catch(error => {
-			next('error');
+			res.status(500).send(error);
 		});
 	});
 	
