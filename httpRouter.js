@@ -1,12 +1,20 @@
 const express = require('express'), path = require('path'), health = require('express-ping'), 
 	request = require('request'), cors = require('cors'), cookieParser = require('cookie-parser'), 
-	bodyParser = require('body-parser');
+	bodyParser = require('body-parser'), router = express.Router();
 
 const database = require('./database');
 const oauth2 = require('./oauth2');
 
+const MULTIPLIER = 2;
+const RANKED_SOLO = 420;
+
 module.exports = {
-start(app){
+	
+async start(app){
+	
+	// Start database 
+	database.getClient().catch(error=>console.log(error));
+	
 	const config = global.isLocal ? require("./ignore/config.json") : null;
 	const API_URL = global.isLocal ? 'http://localhost:8000' : 'https://api200.herokuapp.com';
 
@@ -16,6 +24,7 @@ start(app){
 	errorMessage = (msg) => { return JSON.stringify({"error": `${msg}`}) };
 
 	// usages
+	app.use('/', router);
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({extended: true}));
 	app.use(cors({origin: ALLOW_ORIGIN}));
@@ -26,22 +35,43 @@ start(app){
 	);
 	
 	// ouath2 routes
-	oauth2.start(app);
+	oauth2.start(app, router);
 	
 	// pages
-	app.get('/', (req, res) => {
-		res.status(200).sendFile(path.join(__dirname, 'build', 'index.html'))
+	router.get('/', (req, res) => {
+		res.status(200).sendFile(path.join(__dirname, 'build', 'index.html'));
 	});
-	app.get('/login', (req, res) => {
-		res.status(200).sendFile(path.join(__dirname, 'build', 'index.html'))
+	router.get('/login', (req, res) => {
+		res.redirect('/');
+		//res.status(200).sendFile(path.join(__dirname, 'build', 'index.html'));
 	});
-	app.get('/lol-bets', (req, res) => {
-		res.status(200).sendFile(path.join(__dirname, 'build', 'index.html'))
+	router.get('/bets', (req, res) => {
+		res.status(200).sendFile(path.join(__dirname, 'build', 'index.html'));
 	});
+	router.get('/bets/lol-bets', (req, res) => {
+		res.status(200).sendFile(path.join(__dirname, 'build', 'index.html'));
+	});
+	router.get('/bets/my-bets', (req, res) => {
+		res.status(200).sendFile(path.join(__dirname, 'build', 'index.html'));
+	});
+	
+	const oautRequired = (req, res) => {
+		if(!req.cookies || !req.cookies.discord_token){
+			if(req.cookies && req.cookies.discord_refresh_token) 
+				oauth2.refreshToken(req, res, req.cookies.discord_refresh_token)
+					.then(response => res.status(200).sendFile(path.join(__dirname, 'build', 'index.html')))
+					.catch(error => res.redirect('/'));
+			else {
+				res.redirect('/');
+			}
+		}
+		else res.status(200).sendFile(path.join(__dirname, 'build', 'index.html'));
+	}
 	
 	// -- http commands -- //
 	
-	// api200 userbase
+	// api200 userbase ///////////////////////////////deprecated
+	/*
 	app.post('/token/', (req, res, next) => {
 		const options = {
 			url: API_URL + req.originalUrl,
@@ -110,9 +140,21 @@ start(app){
 		res.cookie('jwt_token', null, {maxAge: 0, httpOnly: true});
 		res.sendStatus(200);
 	});
+	*/
+	/////////////////////////////////////////////////////////////////
+	
+	app.get('/profile', (req, res, next) => {
+		oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
+			.then((data)=>{
+				res.status(200).send(data);
+			})
+			.catch(error => {
+				res.status(500).send(error);
+			});
+	});
 	
 	app.post('/lol/setBet', (req, res, next) => {
-		if(!req.cookies || !req.cookies.discord_token){ res.status(401).send('Not Authorized'); return;}
+		if(!req.cookies || (!req.cookies.discord_token && !req.cookies.discord_refresh_token)){ res.status(401).send('Not Authorized'); return;}
 		const params = req.query;
 		const summoner = encodeURI(params.summoner);
 		const wager = encodeURI(params.wager);
@@ -126,14 +168,14 @@ start(app){
 			}
 		};
 		request(options, function(err, _res, body) {
-			console.log(_res);
+			console.log(body);
 			if(body && _res.statusCode===200) setBet(body, params, req, res, next);
-			else res.status(400).send(err);
+			else res.status(400).send(body);
 		});
 	});
 	
 	const setBet = (body, params, req, res, next) => {
-		oauth2.getUserId(req, res, req.cookies.discord_token)
+		oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
 			.then((data)=>{
 				database.find('zbucks', {"id": data.id}).then(account => {
 					if(account){
@@ -141,19 +183,23 @@ start(app){
 							res.status(400).send('Invalid Wager Amount');
 							return;
 						}
-						const lolParams = safelyParseJSON(body);
-						const accountId = lolParams.accountId;
-						const betTime = new Date().getTime();
-						const betId = data.id+'_'+accountId+'_'+betTime+'_'+!!params.isWin;
-						const betSpecs = {"bet_time": betTime, "account_id": accountId, "lol_name": lolParams.name, "wager": params.wager, "is_win": !!params.isWin};
+						console.log(params.isWin);
+						params.isWin = stringToBool(params.isWin);
 						
-						database.add('lol_bets', {"id":  data.id, "username":  account.username, "bet_id": betId, "bet_specs": betSpecs}, {})
+						const lolParams = safelyParseJSON(body);
+						const betTime = new Date().getTime();
+						const betId = data.id+'_'+lolParams.accountId+'_'+betTime+'_'+params.isWin;
+						const betSpecs = {"bet_time": betTime, "lol_id": lolParams.accountId, "lol_name": lolParams.name, "wager": params.wager, "is_win": params.isWin};
+						
+						database.add('lol_bets', {"id":  data.id, "username":  account.username, "bet_id": betId, "claimed": false, "bet_specs": betSpecs}, {})
 							.then(result => {
 								let parsed = lolParams;
 								parsed.betSpecs = betSpecs;
 								
+								console.log(parsed);
+								
 								database.addOrUpdate('zbucks', {"id": data.id}, {$inc:{"zbucks": parseInt(params.wager)*(-1)}}).then(result => {
-									res.send(JSON.stringify(parsed));
+									res.status(200).send(JSON.stringify(parsed));
 								})
 								.catch(error => {
 									res.status(500).send(error);
@@ -172,15 +218,33 @@ start(app){
 		});
 	}
 	
+	app.get('/lol/getBets', (req, res, next) => {
+		oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
+			.then((data)=>{
+				database.findAll('lol_bets', {"id": data.id}).then(bets => {
+					if(bets){
+						res.status(200).send(JSON.stringify(bets));
+					}
+					else res.status(404).send('No Bets on File');
+				})
+				.catch(error=>res.status(500).send(error));
+			})
+		.catch(error => {
+			res.status(500).send(error);
+		});
+	});
+	
 	app.post('/lol/checkBet', (req, res, next) => {
-		if(!req.cookies || !req.cookies.discord_token){ res.status(401).send('Not Authorized'); return;}
-		oauth2.getUserId(req, res, req.cookies.discord_token)
+		if(!req.cookies || (!req.cookies.discord_token && !req.cookies.discord_refresh_token)){ res.status(401).send('Not Authorized'); return;}
+		const params = req.query;
+		const betId = params && params.betId
+		oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
 			.then((data)=>{
 				if(data){
-					database.find('lol_bets', {"id": data.id}).then(bet => {
-						if(bet){	
+					database.find('lol_bets', {"id": data.id, "bet_id": betId}).then(bet => {
+						if(bet && !bet.claimed){	
 							const options = {
-								url: `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?beginTime={bet.bet_time}`,
+								url: `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${bet.bet_specs.lol_id}?beginTime=${bet.bet_specs.bet_time}`,
 								timeout: 15000,
 								method: 'GET',
 								headers: {
@@ -190,27 +254,66 @@ start(app){
 							};
 							request(options, function(err, _res, body) {
 								if(body && _res.statusCode===200) {
-									matchData = safelyParseJSON(body);
-									res.send(matchData);
+									const matchData = safelyParseJSON(body);
+									const match = matchData && matchData.matches.reverse().find(match => match.queue == RANKED_SOLO);
+									if(match && match.timestamp >= bet.bet_specs.bet_time){
+										searchMatch(res, data, bet, match.gameId);
+									}
+									else res.status(200).send({error:'Match not played yet'});
 								}
-								else res.status(404).send('Match not played yet');
+								else res.status(200).send({error:'Match not played yet'});
 							});
 						}
-						else next('error');
+						else res.status(200).send({error:'Bet Already Claimed'});
 					})
 					.catch(error => {
-						next('error');
+						res.status(500).send(error);
 					});
 				}
 				else res.status(404).send('No Account on File');
 			})
-		.catch(error => {
-			res.status(500).send(error);
-		});
+			.catch(error => {
+				res.status(401).send(error);
+			});
 	});
 	
+	searchMatch = (res, userData, bet, gameId) => {
+		const options = {
+			url: `https://na1.api.riotgames.com/lol/match/v4/matches/${gameId}`,
+			timeout: 15000,
+			method: 'GET',
+			headers: {
+				"User-Agent": "node.js",
+				"X-Riot-Token": RITO_KEY
+			}
+		};
+		request(options, function(err, _res, body) {
+			if(body && _res.statusCode===200) {
+				const matchData = safelyParseJSON(body);
+				if(!matchData || !matchData.participantIdentities){res.status(404).send('Match not found'); return;}
+				
+				const participantIdentity = matchData.participantIdentities.find(p => p.player.accountId == bet.bet_specs.lol_id);
+				const participant = matchData.participants.find(p => p.participantId == participantIdentity.participantId);
+				
+				const didWin = participant.stats.win==bet.bet_specs.is_win;
+				
+				if(didWin){
+					database.addOrUpdate('zbucks', {"id": userData.id}, {$inc:{"zbucks": (MULTIPLIER*parseInt(bet.bet_specs.wager))}})
+						.catch(error => {console.log(error);});
+				}
+				database.addOrUpdate('lol_bets', {"bet_id": bet.bet_id}, {$set:{"claimed": true}})
+					.then((oldBet)=>{
+						// copy over old bets to new database
+					})
+					.catch(error => {console.log(error);});
+				
+				res.status(200).send({didWin: didWin, winnings: didWin ? ('+'+bet.bet_specs.wager) : ('-'+bet.bet_specs.wager)});
+			}
+			else res.status(200).send('Match Data Not Found');
+		});
+	}
 	
-	// helper 
+	// helper methods
 	safelyParseJSON = (json) => {
 		let parsed = {}
 		try {
@@ -220,4 +323,5 @@ start(app){
 		}
 		return parsed;
 	}
+	stringToBool = (str) => (str == 'true');
 }}

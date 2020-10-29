@@ -2,34 +2,34 @@
 .App {
 	font-family: Helvetica, Arial;
 	display: grid;
-	height: 100%;
 	grid-template: auto 1fr auto / auto 1fr auto;
 	font-size: calc(10px + 2vmin);
 	text-align: center;
+	height: 100vh;
 }
 
-.App alert {
-	padding: 0;
-	grid-column: 1 / 4;
-	display: inline;
-    width: 100vw;
+.App header .alert {
+    width: 100%;
+	margin: 0;
+	border-radius: 0;
+	border-color: transparent;
 	font-size: calc(15px + 0.6vmin);
 }
 
-.App alert FontAwesomeIcon {
+.App header .alert FontAwesomeIcon {
 	display: flex;
 	align-items: center;
 	height: 100%;
 }
 
-.App alert .close {
+.App header .alert .close {
 	display: flex;
 	align-items: center;
 	height: 100%;
 }
 
 .App header {
-	padding: 1rem;
+	padding: 0 0 1rem 0;
 	grid-column: 1 / 4;
 	display: inline;
 }
@@ -41,7 +41,8 @@
 .App main {
 	grid-column: 2 / 3;
 	display: grid;
-    place-items: center;
+    align-items: normal;
+    justify-items: center;
 }
 
 .App .right-side {
@@ -80,31 +81,6 @@
 /** overflow **/
 body{
 	overflow-x:hidden;
-}
-
-/** Buttons **/
-.btn {
-	border-radius: 0;
-	border: none;
-	background-color: transparent;
-	color: #BB86FC;
-	cursor: pointer;
-	font-size: calc(16px + 1.2vmin);
-	padding: 0.5em 1.5em;
-	margin: 0.1em 0em;
-	text-transform: uppercase;
-	transition: all 0.50s ease;
-	text-decoration: none;
-	max-width: 400px;
-}
-
-.btn-border:hover {
-	background: #BB86FC;
-}
-
-.btn-border {
-	border-radius: 11px;
-	border: 0.2em solid #BB86FC;
 }
 
 .loading{

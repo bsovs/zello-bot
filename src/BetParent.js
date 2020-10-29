@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import * as $ from "jquery";
 import { Capacitor } from '@capacitor/core';
 import { Link } from "react-router-dom";
-import { Button, Spinner, Form, Input } from 'react-bootstrap';
+import { Button, Spinner, Form, Input, Navbar, Nav } from 'react-bootstrap';
 import {isMobile} from 'react-device-detect';
+import { Switch, Route } from 'react-router-dom';
+import { useHistory } from 'react-router'
 
-import logo from './Styles/logo.svg';
-import './Styles/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from './Styles/logo.svg';
+import './Styles/App.css';
 import SwipeableViews from 'react-swipeable-views';
 
 import Card from './Card';
@@ -15,8 +17,8 @@ import ThemeButton from './ThemeButton';
 import SocketConnection from './SocketConnection';
 import { http } from './httpFactory';
 import { socket } from './Config/config';
-import CodeEditorV2 from './CodeEditorV2';
 import Bet from './Bet/Bet';
+import MyBets from './Bet/MyBets';
 
 class BetParent extends Component {
 
@@ -33,6 +35,8 @@ class BetParent extends Component {
 		this.setState({
 			socketConnected: (this.state.isWeb && this.state.socketConnected===null) ? false : true
 		});
+		
+		http.getProfile().then(profile=>this.setState({username: profile.username})).catch();
 		
 	};
 
@@ -56,31 +60,49 @@ class BetParent extends Component {
     return(
 		<div className="App noselect">
 			<header>
-				<span>
-					<SocketConnection
-						isWeb={this.state.isWeb}
-						socketConnected={this.state.socketConnected}
-						setSocketConnected={
-							(socketConnected) => {
-								return new Promise((resolve, reject) => { 
-									this.setState({socketConnected}, resolve()) 
-								});
-							}
+				<SocketConnection
+					className="alert"
+					isWeb={this.state.isWeb}
+					isDark={this.state.isDark}
+					socketConnected={this.state.socketConnected}
+					setSocketConnected={
+						(socketConnected) => {
+							return new Promise((resolve, reject) => { 
+								this.setState({socketConnected}, resolve()) 
+							});
 						}
-					/>
-				</span>
-				<React.Fragment>
+					}
+				/>
+				
+				<Navbar bg={this.state.isDark?"dark":"light"} variant={this.state.isDark?"dark":"light"}>
+					<Navbar.Brand href="/">Home</Navbar.Brand>
+					<Nav className="mr-auto">
+						<Nav.Link>
+							<Link to="/bets/lol-bets">
+								LOL BETS
+							</Link>
+						</Nav.Link>
+						<Nav.Link>
+							<Link to="/bets/my-bets">
+								MY BETS
+							</Link>
+						</Nav.Link>
+					</Nav>
 					<ThemeButton 
 						isDark={this.state.isDark}
 						setIsDark={(isDark)=>this.setState({isDark})}
-					/>
-				</React.Fragment>
-			</header>
-			<main>
+					/>	
+				</Navbar>
 				
 				<h1>Zello Bets</h1>
+				
+			</header>
+			<main>
 
-				<Bet />
+				<Switch>
+					<Route path='/bets/lol-bets'><Bet /></Route>
+					<Route path='/bets/my-bets'><MyBets username={this.state.username} /></Route>
+				</Switch>
 
 			</main>
 			<footer>

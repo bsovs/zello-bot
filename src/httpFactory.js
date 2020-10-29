@@ -3,12 +3,20 @@ import {serverUri, isLocal, API_URL, GITHUB_CLIENT_ID} from "./Config/config";
 
 class httpFactory {
 
-	betsPage = () => {
-		$.ajax({
-			url: API_URL + `/lol-bets`,
-			type: "GET",
-			timeout: 15000
-		});	
+	getProfile = () => {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url: API_URL + `/profile`,
+				type: "GET",
+				timeout: 15000,
+				success: (data) => {
+					resolve(data);
+				},
+				error: (XMLHttpRequest, textStatus, errorThrown) => {
+					reject(errorThrown);
+				}
+			});
+		});		
 	}
 
 	setBet = (summoner, wager, isWin) => {
@@ -16,7 +24,7 @@ class httpFactory {
 			$.ajax({
 				url: API_URL + `/lol/setBet?summoner=${summoner}&wager=${wager}&isWin=${isWin}`,
 				type: "POST",
-				timeout: 30000,
+				timeout: 60000,
 				success: (data) => {
 					resolve(JSON.parse(data));
 				},
@@ -27,6 +35,39 @@ class httpFactory {
 		});		
 	};
 	
+	getBets = () => {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url: API_URL + `/lol/getBets`,
+				type: "GET",
+				timeout: 15000,
+				success: (data) => {
+					resolve(JSON.parse(data));
+				},
+				error: (XMLHttpRequest, textStatus, errorThrown) => {
+					reject(errorThrown);
+				}
+			});
+		});	
+	};
+	
+	checkBet = (betId) => {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url: API_URL + `/lol/checkBet?betId=${betId}`,
+				type: "POST",
+				timeout: 60000,
+				success: (data) => {
+					resolve(data);
+				},
+				error: (XMLHttpRequest, textStatus, errorThrown) => {
+					reject(errorThrown);
+				}
+			});
+		});		
+	};
+	
+	/*
 	logout = () => { 
 		return new Promise((resolve, reject) => {
 			$.ajax({
@@ -108,5 +149,6 @@ class httpFactory {
 			});
 		});		
 	};
+	*/
 }
 export const http = new httpFactory();

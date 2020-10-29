@@ -2,13 +2,13 @@
 import * as $ from "jquery";
 import { Capacitor } from '@capacitor/core';
 import { Link } from "react-router-dom";
-import { Button, Spinner, Form, Input } from 'react-bootstrap';
+import { Button, Spinner, Form, Input, Navbar, Nav } from 'react-bootstrap';
 import {isMobile} from 'react-device-detect';
 import Cookies from 'universal-cookie';
 
-import logo from './Styles/logo.svg';
-import './Styles/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from './Styles/logo.svg';
+import './Styles/App.css';
 import SwipeableViews from 'react-swipeable-views';
 
 import Card from './Card';
@@ -24,12 +24,12 @@ class App extends Component {
 
 	constructor(props) {
 		super(props);
-		let JWT = cookies.get('JWT', {doNotParse: true});
+		let user = cookies.get('user', {doNotParse: true});
 		this.state = {
 			isDark: false,
 			isWeb: Capacitor.platform==='web',
 			socketConnected: true,
-			JWT: JWT!=='' ? JWT : null,
+			user: user!=='' ? user : null,
 		}
 	}
 
@@ -60,38 +60,54 @@ class App extends Component {
     return(
 		<div className="App noselect">
 			<header>
-				<span>
-					<SocketConnection
-						isWeb={this.state.isWeb}
-						socketConnected={this.state.socketConnected}
-						setSocketConnected={
-							(socketConnected) => {
-								return new Promise((resolve, reject) => { 
-									this.setState({socketConnected}, resolve()) 
-								});
-							}
+				<SocketConnection
+					className="alert"
+					isWeb={this.state.isWeb}
+					isDark={this.state.isDark}
+					socketConnected={this.state.socketConnected}
+					setSocketConnected={
+						(socketConnected) => {
+							return new Promise((resolve, reject) => { 
+								this.setState({socketConnected}, resolve()) 
+							});
 						}
-					/>
-				</span>
-				<React.Fragment>
+					}
+				/>
+				<Navbar bg={this.state.isDark?"dark":"light"} variant={this.state.isDark?"dark":"light"}>
+					<Navbar.Brand href="/">Home</Navbar.Brand>
+					<Nav className="mr-auto">
+							{this.state.user 
+								?(<Nav.Link>
+									<Link to="/bets">
+										BETS
+									</Link>
+								</Nav.Link>
+								)
+								:(<Nav.Link href="/api/discord">
+									Authorize App
+								</Nav.Link>
+								)
+							}
+					</Nav>
 					<ThemeButton 
 						isDark={this.state.isDark}
 						setIsDark={(isDark)=>this.setState({isDark})}
-					/>
-				</React.Fragment>
+					/>	
+				</Navbar>
 			</header>
 			<main>
 				
 				<h1>Zello Bot</h1>
 				
-				{this.state.JWT && (
-					<Link to="/lol-bets">
-						LOL BETS
-					</Link>
-				)}
-				<a href="/api/discord">
-					Authorize App
-				</a>
+				{this.state.user 
+					?(
+						<h1>Such Empty</h1>
+					)
+					:(<a href="/api/discord">
+						Authorize App
+					</a>
+					)
+				}
 
 			</main>
 			<footer>
