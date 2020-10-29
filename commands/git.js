@@ -4,6 +4,7 @@ const database = require('../database');
 const {init} = require('./zbucks');
 
 module.exports = {
+	excluded: true,
 	name: 'git',
 	description: 'Git Commands in Discord',
 	execute(message, args) {

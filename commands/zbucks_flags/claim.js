@@ -8,10 +8,10 @@ module.exports = {
 	execute(message, args, parent) {
 		const claimAmount = module.exports.claimAmount;
 		const utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-		database.find('zbucks', {"id": message.author.id, "server_id": message.guild.id}).then(account => {
+		database.find('zbucks', {"id": message.author.id}).then(account => {
 			if(!account) account = parent.newAccount(message);
 			if(account.claimDate != utc){
-				database.addOrUpdate('zbucks', {"id": account.id, "server_id": account.server_id}, 
+				database.addOrUpdate('zbucks', {"id": account.id}, 
 					{$set:{"zbucks": ((account.zbucks||0)+claimAmount), "claimDate": utc, "username": account.username}})
 					.then(result => {
 						if(result) reply.success(message, `${claimAmount} Z-Bucks Added to ${account.username}'s Account`, null);
