@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import update from 'immutability-helper';
 
 import {http} from "../httpFactory";
 

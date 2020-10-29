@@ -6,6 +6,7 @@ const zbucks = require('../commands/zbucks');
 const git = [{"id": "295320498806718464", "name": "sovranb"}];
 
 module.exports = {
+	excluded: true,
 	name: 'GitHub',
 	description: 'GitHub Bot Commands',
 	async execute(message) {
