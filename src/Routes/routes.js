@@ -7,10 +7,10 @@ import BetParent from '../BetParent';
 
 const Routes = () => {
   return (
-    <Switch> {/* The Switch decides which component to show based on the current URL.*/}
+    <Switch>
       <Route exact path='/' component={App}></Route>
-	  <Route exact path='/login' component={Login}></Route>
-	  <Route exact path='/lol-bets' component={BetParent}></Route>
+	  <Route path='/login' component={Login}></Route>
+	  <Route path='/bets' component={BetParent}></Route>
     </Switch>
   );
 }

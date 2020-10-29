@@ -4,6 +4,7 @@ import {socket} from "./Config/config";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { Alert } from 'react-bootstrap';
 
 class SocketConnection extends Component {
 	constructor(props) {
@@ -28,10 +29,10 @@ class SocketConnection extends Component {
 
 		if (isWeb && !socketConnected){
 			return (
-				<div className="alert alert-dismissible  show" role="alert">
+				<Alert role="alert" variant={this.props.isDark?"light":"dark"}>
 					<FontAwesomeIcon icon={faExclamationTriangle} size="1x" />
 					<strong>Internet not Connected</strong>
-				</div>
+				</Alert>
 			);
 		}
 		return null;

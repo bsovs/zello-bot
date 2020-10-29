@@ -29,17 +29,19 @@ class Bet extends Component {
 			
 			{this.state.summoner
 				?(<React.Fragment>
-					<p> Bet Confirmed </p>
-					<ul>
-						<li>Bet Time: { this.state.summoner.betSpecs.bet_time }</li>
-						<li>Wager: { this.state.summoner.betSpecs.wager } z-bucks</li>
-						<li>Win/Loss: { this.state.summoner.betSpecs.is_win ? 'Win' : 'Loss' }</li>
-						<li>Summoner Name: { this.state.summoner.name }</li>
-						<li>Summoner Level: { this.state.summoner.summonerLevel }</li>
-					</ul>
-					<Button className="btn-border" variant="primary" onClick={()=>this.setState({summoner: null})}>
-						New Bet
-					</Button>
+					<h3> Bet Confirmed </h3>
+					<table id="claimTable" className="text" style={{width: '100%', alignItems: 'center'}}>
+						<tr>Bet Time: { this.state.summoner.betSpecs.bet_time }</tr>
+						<tr>Wager: { this.state.summoner.betSpecs.wager } z-bucks</tr>
+						<tr>Win/Loss: { this.state.summoner.betSpecs.is_win ? 'Win' : 'Loss' }</tr>
+						<tr>Summoner Name: { this.state.summoner.name }</tr>
+						<tr>Summoner Level: { this.state.summoner.summonerLevel }</tr>
+						<tr>
+							<Button className="btn-border" variant="primary" onClick={()=>this.setState({summoner: null})}>
+								New Bet
+							</Button>
+						</tr>
+					</table>
 				</React.Fragment>)
 				:(
 					<BetForm bet={this.bet} />

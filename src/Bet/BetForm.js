@@ -27,7 +27,6 @@ class BetForm extends Component {
 	}
 	
 	setWin = (event) => {
-		console.log(this.state.isWin);
 		this.setState({isWin: event.target.checked });
 	}
 	
@@ -75,7 +74,7 @@ class BetForm extends Component {
 					/>
 				</Form.Group>
 				<Form.Group>
-					<Button className="btn-border" variant="primary" type="submit">
+					<Button variant={this.state.isDark?"light":"dark"} type="submit">
 						Place Bet
 					</Button>
 					<Form.Text className="text-muted">

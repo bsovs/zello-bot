@@ -8,7 +8,7 @@ import { Button, Spinner, Form, Input } from 'react-bootstrap';
 import {isMobile} from 'react-device-detect';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./Styles/App.scss";
+import "./Styles/App.css";
 import "./Styles/theme.css";
 
 import HomeNav from './HomeNav';
