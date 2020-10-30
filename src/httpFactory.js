@@ -67,6 +67,22 @@ class httpFactory {
 		});		
 	};
 	
+	getPopularBets = () => {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url: API_URL + `/lol/getPopularBets`,
+				type: "GET",
+				timeout: 15000,
+				success: (data) => {
+					resolve(JSON.parse(data));
+				},
+				error: (XMLHttpRequest, textStatus, errorThrown) => {
+					reject(errorThrown);
+				}
+			});
+		});	
+	};
+	
 	/*
 	logout = () => { 
 		return new Promise((resolve, reject) => {

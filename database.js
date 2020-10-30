@@ -76,5 +76,35 @@ module.exports = {
 				})
 			).catch(error => reject(error))
 		);
+	},
+	average(tableName, queryId, amountId) {	
+		return new Promise((resolve, reject) => 
+			module.exports.getClient().then(client => 	
+				client.db("zello").collection(tableName).aggregate({$group: {"_id": queryId, "avg": {$avg: {$toInt: amountId}}}}, function(err, result) {
+					if(err) reject(err);
+					else resolve(result);
+				})
+			).catch(error => reject(error))
+		);
+	},
+	mostPopular(tableName, queryId) {	
+		return new Promise((resolve, reject) => 
+			module.exports.getClient().then(client => 	
+				client.db("zello").collection(tableName).aggregate({$sortByCount: queryId}, function(err, result) {
+					if(err) reject(err);
+					else resolve(result);
+				})
+			).catch(error => reject(error))
+		);
+	},
+	groupAndSort(tableName, command) {	
+		return new Promise((resolve, reject) => 
+			module.exports.getClient().then(client => 	
+				client.db("zello").collection(tableName).aggregate({$group: command}, {$sort: {count: -1}}).toArray(function(err, result) { //TODO: MAP LIST OF COMMANDS
+					if(err) reject(err);
+					else resolve(result);
+				})
+			).catch(error => reject(error))
+		);
 	}
 }

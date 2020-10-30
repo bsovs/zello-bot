@@ -8,22 +8,24 @@ import { Button, Spinner, Form, Input } from 'react-bootstrap';
 
 import BetForm from './BetForm';
 
-class Bet extends Component {
+class LolBets extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
 	}
 	async componentDidMount() {
-		//this.bet('sohozang');
+		
 	}
 	
-	bet = (summoner, wager, isWin) => {
+	setBet = (summoner, wager, isWin) => {
 		return http.setBet(summoner, wager, isWin).then(summoner=>this.setState({summoner})).catch(err=>err);
 	};
 	
 	render() {
 		const { } = this.props;
-
+		
+		console.log(this.props.match.params);
+		
 		return (
 			<React.Fragment>
 			
@@ -44,11 +46,11 @@ class Bet extends Component {
 					</table>
 				</React.Fragment>)
 				:(
-					<BetForm bet={this.bet} />
+					<BetForm setBet={this.setBet} bet={this.props.match.params} />
 				)
 			}
 			</React.Fragment>
 		);
 	}
 }
-export default Bet;
+export default LolBets;
