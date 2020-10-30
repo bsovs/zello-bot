@@ -290,6 +290,8 @@ async start(app){
 		.catch(error => {res.status(500).send(error);});
 	};
 	
+	let betIdCache = [];
+	
 	app.post('/lol/checkBet', (req, res, next) => {
 		if(!req.cookies || (!req.cookies.discord_token && !req.cookies.discord_refresh_token)){ res.status(401).send('Not Authorized'); return;}
 		const params = req.query;
@@ -298,7 +300,10 @@ async start(app){
 			.then((data)=>{
 				if(data){
 					database.find('lol_bets', {"id": data.id, "bet_id": betId}).then(bet => {
-						if(bet && !bet.claimed){	
+						if(bet && !bet.claimed && !betIdCache.find(_betId => _betId==betId)){	
+							
+							betIdCache.push(betId);
+						
 							const options = {
 								url: `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${bet.bet_specs.lol_id}?beginTime=${bet.bet_specs.bet_time}`,
 								timeout: 15000,
@@ -359,7 +364,9 @@ async start(app){
 				}
 				database.addOrUpdate('lol_bets', {"bet_id": bet.bet_id}, {$set:{"claimed": true}})
 					.then((oldBet)=>{
-						// copy over old bets to new database
+						const betIndex = betIdCache.findIndex(betId => betId == bet.bet_id);
+						betIdCache.splice(betIndex, 1);
+						// TODO: copy over old bets to new database
 					})
 					.catch(error => {console.log(error);});
 				
