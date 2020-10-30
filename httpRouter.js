@@ -155,9 +155,11 @@ async start(app){
 	
 	app.post('/lol/setBet', (req, res, next) => {
 		if(!req.cookies || (!req.cookies.discord_token && !req.cookies.discord_refresh_token)){ res.status(401).send('Not Authorized'); return;}
+		
 		const params = req.query;
+		if(!validateSetBetParams(params)){ res.status(400).send('Invalid Request'); return;}
+		
 		const summoner = encodeURI(params.summoner);
-		const wager = encodeURI(params.wager);
 		const options = {
 			url: `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner}`,
 			timeout: 15000,
@@ -179,7 +181,7 @@ async start(app){
 			.then((data)=>{
 				database.find('zbucks', {"id": data.id}).then(account => {
 					if(account){
-						if(account.zbucks < params.wager || params.wager<=0){
+						if(!params.wager || account.zbucks < params.wager || params.wager<=0){
 							res.status(400).send('Invalid Wager Amount');
 							return;
 						}
@@ -230,9 +232,63 @@ async start(app){
 				.catch(error=>res.status(500).send(error));
 			})
 		.catch(error => {
-			res.status(500).send(error);
+			res.status(401).send(error);
 		});
 	});
+	
+	app.get('/lol/getPopularBets', (req, res, next) => {
+		oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
+			.then((data)=>{
+				getPopularBets(res);
+			})
+		.catch(error => {
+			res.status(401).send(error);
+		});
+	});
+
+	const getPopularBets = (res) => {
+		const queryId = "$bet_specs.lol_id";
+		const queryCommand = {"_id": queryId, "avg_wager": {$avg: {$toInt: "$bet_specs.wager"}}, "avg_is_win": {$avg: {$toInt: "$bet_specs.is_win"}}, "count": {$sum: 1}};
+		database.groupAndSort('lol_bets', queryCommand)
+			.then(bets => {
+				if(bets){
+					return transformToBet(res, bets);
+				}
+				else res.status(500).send('No Bets on File');
+			})
+			.catch(error => {res.status(500).send(error);});
+	};
+	
+	const transformToBet = (res, bets) => {
+		Promise.all(bets.map(bet => {
+			return new Promise((resolve, reject) => {
+				database.find('lol_bets', {"bet_specs.lol_id": bet._id})
+					.then(account => {
+						
+					let newBet = 
+						{
+							id: "",
+							username: "",
+							bet_id: "",
+							claimed: false,
+							bet_specs: {
+								bet_time: 0,
+								lol_id: bet._id,
+								lol_name: account && account.bet_specs.lol_name,
+								wager: bet.avg_wager,
+								is_win: (bet.avg_is_win >= 0.5)
+							}
+						}
+						resolve(newBet);
+					})
+					.catch(error=>{reject(error)});
+			});
+		}))
+		.then(_newBets => {
+			res.status(200).send(JSON.stringify(_newBets));
+		})
+		.catch(error => {res.status(500).send(error);});
+	};
 	
 	app.post('/lol/checkBet', (req, res, next) => {
 		if(!req.cookies || (!req.cookies.discord_token && !req.cookies.discord_refresh_token)){ res.status(401).send('Not Authorized'); return;}
@@ -323,5 +379,20 @@ async start(app){
 		}
 		return parsed;
 	}
+	
 	stringToBool = (str) => (str == 'true');
+	
+	validateSetBetParams = (params) => {
+		let valid = true;
+		try{
+			parseInt(params.wager);
+		}catch(e){ 
+			valid = false 
+		}
+		if(params.isWin != "true" || params.isWin != "false") valid = false;
+		
+		return valid;
+	}
+	
+	isDefined = (obj) => (typeof obj !== 'undefined');
 }}

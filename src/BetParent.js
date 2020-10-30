@@ -17,8 +17,9 @@ import ThemeButton from './ThemeButton';
 import SocketConnection from './SocketConnection';
 import { http } from './httpFactory';
 import { socket } from './Config/config';
-import Bet from './Bet/Bet';
+import LolBets from './Bet/LolBets';
 import MyBets from './Bet/MyBets';
+import BetsHome from './Bet/BetsHome';
 
 class BetParent extends Component {
 
@@ -39,23 +40,12 @@ class BetParent extends Component {
 		http.getProfile().then(profile=>this.setState({username: profile.username})).catch();
 		
 	};
-
-	//button functions
-	home = () => {
-		this.setState({
-
-		});
-	}
-	joinRoom = (event) => {
-		event.preventDefault();
-		this.setState({
 	
-		});
-	}
+	fillBet = (bet) => this.setState({bet});
 
 	render(){
 
-    const { } = this.state;
+    const { bet } = this.state;
 
     return(
 		<div className="App noselect">
@@ -77,6 +67,11 @@ class BetParent extends Component {
 				<Navbar bg={this.state.isDark?"dark":"light"} variant={this.state.isDark?"dark":"light"}>
 					<Navbar.Brand href="/">Home</Navbar.Brand>
 					<Nav className="mr-auto">
+						<Nav.Link>
+							<Link to="/bets">
+								BETS
+							</Link>
+						</Nav.Link>
 						<Nav.Link>
 							<Link to="/bets/lol-bets">
 								LOL BETS
@@ -100,7 +95,9 @@ class BetParent extends Component {
 			<main>
 
 				<Switch>
-					<Route path='/bets/lol-bets'><Bet /></Route>
+					<Route exact path='/bets'><BetsHome fillBet={this.fillBet} /></Route>
+					<Route path='/bets/lol-bets/:summoner?/:wager?/:isWin?' component={LolBets} />
+					<Route path='/bets/lol-bets' component={LolBets} />
 					<Route path='/bets/my-bets'><MyBets username={this.state.username} /></Route>
 				</Switch>
 

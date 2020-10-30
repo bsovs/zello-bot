@@ -8,11 +8,11 @@ class BetForm extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			summoner: '',
-			wager: 20,
-			loading: false,
-			isWin: false
-		};
+				summoner: props.bet.summoner || '',
+				wager: props.bet.wager || 20,
+				loading: props.bet.loading || false,
+				isWin: props.bet.isWin || false
+			};
 	}
 	async componentDidMount() {
 		
@@ -33,10 +33,13 @@ class BetForm extends Component {
 	submitForm = (event) => {
 		event.preventDefault();
 		this.setState({loading: true});
-		this.props.bet(this.state.summoner, this.state.wager, this.state.isWin).finally(()=>this.setState({loading: false}));
+		this.props.setBet(this.state.summoner, parseInt(this.state.wager), !!this.state.isWin).finally(()=>this.setState({loading: false}));
 	}
 
 	render(){
+		
+		const { summoner, wager, loading, isWin } = this.state;	
+		
 	return (
 		<React.Fragment>
 		{this.state.loading
@@ -57,20 +60,23 @@ class BetForm extends Component {
 			<Form onSubmit={this.submitForm}>
 				<Form.Group controlId="formBasicText">
 					<Form.Label>Summoner Name</Form.Label>
-					<Form.Control type="text" placeholder="Enter Summoner Name" required="required" onChange={this.setSummoner}  />
+					<Form.Control type="text" placeholder="Enter Summoner Name" required="required" 
+						onChange={this.setSummoner}
+						value={summoner}
+					/>
 				</Form.Group> 
 				<Form.Group>
 					<Form.Label>Z-Bucks Wager</Form.Label>
-					<Form.Control type="range" onChange={this.setWager} value={this.state.wager} />
+					<Form.Control type="range" onChange={this.setWager} value={wager}/>
 					<Form.Text className="text-muted">
-						Amount: <Form.Control type="number" onChange={this.setWager} value={this.state.wager}/>
+						Amount: <Form.Control type="number" onChange={this.setWager} value={wager}/>
 					</Form.Text>
 					<Form.Check 
 						type='checkbox'
 						id='default-checkbox'
 						label='Will Win'
 						onChange={this.setWin}
-						checked={this.state.isWin}
+						checked={isWin}
 					/>
 				</Form.Group>
 				<Form.Group>
