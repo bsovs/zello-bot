@@ -1,0 +1,72 @@
+// api200 userbase ///////////////////////////////deprecated
+/*
+app.post('/token/', (req, res, next) => {
+    const options = {
+        url: API_URL + req.originalUrl,
+        timeout: 15000,
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        formData: {
+            username: req.body.username,
+            password: req.body.password
+        }
+    };
+    request(options, function(err, _res, body) {
+        if(_res && _res.statusCode==200){
+            const params = safelyParseJSON(body);
+            res.cookie('jwt_token', params.access_token, {
+                httpOnly: true,
+                secure: true
+            });
+            res.sendStatus(200);
+        }
+        else res.sendStatus(400);
+    });
+});
+
+app.get('/users/me', (req, res, next) => {
+    auth(req).then((val)=>res.send(val)).catch(e=>res.send(e));
+});
+
+auth = (req) => new Promise((resolve, reject)=>{
+    const options = {
+        url: API_URL + '/users/me',
+        timeout: 15000,
+        method: 'GET',
+        headers: {
+            "Authorization": ("Bearer " + req.cookies.jwt_token)
+        },
+    };
+    request(options, function(err, _res, body) {
+        const parse = JSON.parse(body);
+        resolve(parse);
+    });
+});
+
+app.post('/signup/', (req, res, next) => {
+    const options = {
+        url: API_URL + req.originalUrl,
+        timeout: 15000,
+        method: 'POST'
+    };
+    request(options, function(err, _res, body) {
+        const params = safelyParseJSON(body);
+        if(_res && _res.statusCode==200){
+            res.cookie('jwt_token', params.access_token, {
+                httpOnly: true,
+                secure: true
+            });
+            res.send(params);
+        }
+        else next(params);
+    });
+});
+
+app.post('/logout/', (req, res, next) => {
+    res.cookie('jwt_token', null, {maxAge: 0, httpOnly: true});
+    res.sendStatus(200);
+});
+*/
+/////////////////////////////////////////////////////////////////

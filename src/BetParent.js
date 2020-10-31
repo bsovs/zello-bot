@@ -20,6 +20,8 @@ import { socket } from './Config/config';
 import LolBets from './Bet/LolBets';
 import MyBets from './Bet/MyBets';
 import BetsHome from './Bet/BetsHome';
+import Roulette from "./Bet/Roulette";
+import RouletteParent from "./Bet/RouletteParent";
 
 class BetParent extends Component {
 
@@ -65,11 +67,16 @@ class BetParent extends Component {
 				/>
 				
 				<Navbar bg={this.state.isDark?"dark":"light"} variant={this.state.isDark?"dark":"light"}>
-					<Navbar.Brand href="/">Home</Navbar.Brand>
+					<Navbar.Brand><Link to="/">Home</Link></Navbar.Brand>
 					<Nav className="mr-auto">
 						<Nav.Link>
 							<Link to="/bets">
 								BETS
+							</Link>
+						</Nav.Link>
+						<Nav.Link>
+							<Link to="/bets/roulette">
+								Roulette
 							</Link>
 						</Nav.Link>
 						<Nav.Link>
@@ -98,7 +105,8 @@ class BetParent extends Component {
 					<Route exact path='/bets'><BetsHome fillBet={this.fillBet} /></Route>
 					<Route path='/bets/lol-bets/:summoner?/:wager?/:isWin?' component={LolBets} />
 					<Route path='/bets/lol-bets' component={LolBets} />
-					<Route path='/bets/my-bets'><MyBets username={this.state.username} /></Route>
+					<Route path='/bets/my-bets'><MyBets username={this.state.username} isDark={this.state.isDark} /></Route>
+					<Route path='/bets/roulette'><RouletteParent isDark={this.state.isDark} /></Route>
 				</Switch>
 
 			</main>

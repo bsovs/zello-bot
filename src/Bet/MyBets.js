@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import { Button, Spinner, Form, Input } from 'react-bootstrap';
 
+import BetButton from "./BetButton";
+import {MOCKED_BET} from "./mocked_bet";
 
 class MyBets extends Component {
 	constructor(props) {
@@ -21,7 +23,7 @@ class MyBets extends Component {
 	};
 	
 	checkBet = (betId) => {
-		http.checkBet(betId).then(res=>{
+		return http.checkBet(betId).then(res=>{
 			const betIndex = this.state.bets.findIndex(bet => bet && bet.bet_id == betId);
 			if (betIndex === -1){
 					console.log('error'); //error
@@ -53,14 +55,13 @@ class MyBets extends Component {
 				<td>{bet.bet_specs.wager}</td>
 				<td>{bet.bet_specs.is_win?'W':'L'}</td>
 				<td>
-				{bet.claimed 
-					?(<Button className="btn-border" variant="secondary" disabled="disabled">
-						Claimed
-					</Button>)
-					:(<Button variant={this.state.isDark?"light":"dark"} onClick={()=>this.checkBet(`${bet.bet_id}`)} disabled={bet.disabled}>
-						{bet.message ? bet.message : 'Check Status'}
-					</Button>)
-				}
+					<BetButton
+						claimed={bet.claimed}
+						variant={this.props.isDark?"light":"dark"}
+						onClick={()=>this.checkBet(`${bet.bet_id}`)}
+						disabled={bet.disabled}
+						message={bet.message ? bet.message : 'Check Status'}
+					/>
 				</td>
 			</tr>)
 		);

@@ -12,12 +12,8 @@ module.exports = {
 	execute(message, args) {
 		if (!args[0]) {
 			module.exports.list(message);
-		}
-		else{	
-			try{
-				flagService.checkFlags(message, args, flagBody, module.exports);
-			}
-			catch(error){throw error}
+		} else {
+			flagService.checkFlags(message, args, flagBody, module.exports);
 		}
 	},
 	list(message) {

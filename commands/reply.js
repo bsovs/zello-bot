@@ -53,9 +53,9 @@ module.exports = {
 		message.channel.send(message.author.toString(), val);
 	},
 	table(message, list, isInline, header, description, thumbnail, url, color){
-		const getFields = (list) => {
-			if(typeof list !== 'object' || list == null) return list;
-			return list.map(item => {return ({ 'name': item.name, 'value': item.value, 'inline': isInline })})
+		const getFields = (messageList) => {
+			if(typeof messageList !== 'object' || messageList == null) return messageList;
+			return messageList.map(item => {return ({ 'name': item.name, 'value': item.value, 'inline': isInline })})
 		};
 		const tableEmbed = new Discord.MessageEmbed()
 			.setColor(color)

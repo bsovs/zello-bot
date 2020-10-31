@@ -82,6 +82,22 @@ class httpFactory {
 			});
 		});	
 	};
+
+	spinWheel = (betNumber, wager) => {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url: API_URL + `/bets/roulette?betNumber=${betNumber}&wager=${wager}`,
+				type: "POST",
+				timeout: 15000,
+				success: (data) => {
+					resolve(data);
+				},
+				error: (XMLHttpRequest, textStatus, errorThrown) => {
+					reject(errorThrown);
+				}
+			});
+		});
+	};
 	
 	/*
 	logout = () => { 

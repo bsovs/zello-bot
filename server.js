@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
 const fs = require('fs');
-const PORT = process.env.PORT || 8080, isLocal=(PORT===8080);
-const express = require('express'), app = express(), http = require('http').Server(app), httpRouter = require('./httpRouter');
+const PORT = process.env.PORT || 8080, isLocal = (PORT === 8080);
+const express = require('express'), app = express(), http = require('http').Server(app),
+	httpRouter = require('./express/httpRouter');
 const io = require('socket.io')(http), socket = require('./socket.io/socket');
 
 const config = isLocal ? require("./ignore/config.json") : null;
@@ -9,15 +10,15 @@ const config = isLocal ? require("./ignore/config.json") : null;
 global.URL = isLocal ? `http://localhost:${PORT}` : 'https://zellobot.herokuapp.com';
 global.isLocal = isLocal;
 
-//** Express Server **//
-http.listen(PORT, function(){
-	console.info('\x1b[32m','Listening on:', PORT);
-});
-httpRouter.start(app);
-
 
 //** Socket.io **//
 socket.open(io);
+
+//** Express Server **//
+httpRouter.start(app);
+http.listen(PORT, function(){
+	console.info('\x1b[32m','Listening on:', PORT);
+});
 
 //** Discord Bot **//
 const client = new Discord.Client();
@@ -69,8 +70,9 @@ client.on("message", function(message) {
 		}
 	} catch (error) {
 		console.error(error);
-		errorMsg = error ? `Error: ${error}`: '';
-		message.reply(`there was an error trying to execute that command! \n ${errorMsg}`);
+		const errorMsg = error ? `Error: ${error}`: '';
+		message.reply(`there was an error trying to execute that command! \n ${errorMsg}`)
+			.catch(e=>console.log(e));
 	}
 });
 client.on('ready', () => {
