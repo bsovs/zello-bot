@@ -1,0 +1,18 @@
+const database = require('../../database'),
+    {ErrorHandler} = require('../errors/errorHandler');
+
+const bankList = () => {
+    return database.findAll('zbucks', {})
+        .then(users => {
+            if (users) {
+                return JSON.stringify(users);
+            } else throw new ErrorHandler(500, 'No Users on File');
+        })
+        .catch(error => {
+            throw new ErrorHandler(500, 'Database Error');
+        });
+};
+
+module.exports = {
+    bankList
+}

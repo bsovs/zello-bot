@@ -12,6 +12,7 @@ import SwipeableViews from 'react-swipeable-views';
 import Card from './Card';
 import ThemeButton from './ThemeButton';
 import SocketConnection from './SocketConnection';
+import ZBucksHome from "./zbucks/ZBucksHome";
 
 //Global Vars
 const cookies = new Cookies();
@@ -91,9 +92,9 @@ class App extends Component {
 
                     {this.state.user
                         ? (
-                            <h1>Such Empty</h1>
+                            <ZBucksHome isDark={this.state.isDark}/>
                         )
-                        : (<a href="/api/discord">
+                        : (<a href="/api/discord" className='text'>
                                 Authorize App
                             </a>
                         )

@@ -6,6 +6,7 @@ const { HOME_PATH } = require('./config/constants');
 
 const database = require('../database');
 const oauth2 = require('./oauth/oauth2');
+const {bankList} = require("./zbucks/bankList");
 const {roulette} = require("./bets/roulette");
 const { handleError, ErrorHandler } = require('./errors/errorHandler')
 const { ALLOW_ORIGIN } = require('./config/constants')
@@ -97,6 +98,14 @@ const start = function (app) {
         oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
             .then((data) => {
                 popularBets().then(data => res.status(200).send(data)).catch(error => next(error));
+            })
+            .catch((error) => next(error));
+    });
+
+    app.get('/zbucks/getBankList', (req, res, next) => {
+        oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
+            .then((data) => {
+                bankList().then(data => res.status(200).send(data)).catch(error => next(error));
             })
             .catch((error) => next(error));
     });

@@ -43,6 +43,7 @@
 	display: grid;
     align-items: normal;
     justify-items: center;
+	overflow-y: scroll;
 }
 
 .App .right-side {
@@ -58,6 +59,27 @@
 	height: 40vmin;
 	pointer-events: none;
 	filter: invert(72%) sepia(64%) saturate(594%) hue-rotate(142deg) brightness(127%) contrast(93%);
+}
+
+/*
+ *  Body ScrollBar
+ */
+.App main::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+.App main::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+.App main::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
 }
 
 @keyframes App-logo-spin {
