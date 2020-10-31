@@ -24,7 +24,7 @@ const calcWinnings = (wheelNumber, betNumber, wager) => {
     try {
         if ((betNumber === "Red" || betNumber === "Black")) {
             const didWin = (wheelNumber !== 0) ? (colorToInt(betNumber) === (wheelNumber%2)) : false;
-            return ((didWin ? 2 : -1) * parseInt(wager));
+            return ((didWin ? 1 : -1) * parseInt(wager));
         }
         else {
             const didWin = (parseInt(betNumber) === wheelNumber);
