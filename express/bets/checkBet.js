@@ -76,7 +76,7 @@ const searchMatch = (res, userData, bet, gameId) => {
             const participant = matchData.participants.find(p => p.participantId == participantIdentity.participantId);
 
             const didWin = participant.stats.win == bet.bet_specs.is_win;
-            const winnings = calcWinnings(bet);
+            const winnings = calcWinnings(bet, bet.bet_specs.is_win);
 
             database.findAndUpdate('lol_bets', {"bet_id": bet.bet_id, "claimed": false}, {$set: {"claimed": true}})
                 .then((oldBet) => {
@@ -102,10 +102,12 @@ const searchMatch = (res, userData, bet, gameId) => {
     });
 };
 
-const calcWinnings = (bet) => {
+const calcWinnings = (bet, isWin) => {
     try{
-        if(bet.bet_specs.bet_odds)
-            return Math.round(bet.bet_specs.bet_odds.return * parseInt(bet.bet_specs.wager));
+        if(bet.bet_specs.bet_odds) {
+            const betReturn = isWin ? bet.bet_specs.bet_odds.return : (1/(1 - bet.bet_specs.bet_odds.odds));
+            return Math.round(betReturn * parseInt(bet.bet_specs.wager));
+        }
         else return Math.round(MULTIPLIER * parseInt(bet.bet_specs.wager));
     }catch(e){
         return Math.round(MULTIPLIER * parseInt(bet.bet_specs.wager));
