@@ -97,7 +97,6 @@ const getUserId = function(req, res, access_token, refresh_token) {
             })
             .catch(error => {
                 if (error.response.status === 401) {
-                    console.log(refresh_token);
                     refreshToken(req, res, refresh_token)
                         .then((new_access_token, new_refresh_token) => {
                             getUserId(req, res, new_access_token, new_refresh_token)

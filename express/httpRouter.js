@@ -6,6 +6,8 @@ const { HOME_PATH } = require('./config/constants');
 
 const database = require('../database');
 const oauth2 = require('./oauth/oauth2');
+const {cache} = require("./helper/cache");
+const {getOdds} = require("./bets/odds");
 const {bankList} = require("./zbucks/bankList");
 const {roulette} = require("./bets/roulette");
 const { handleError, ErrorHandler } = require('./errors/errorHandler')
@@ -98,6 +100,14 @@ const start = function (app) {
         oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
             .then((data) => {
                 popularBets().then(data => res.status(200).send(data)).catch(error => next(error));
+            })
+            .catch((error) => next(error));
+    });
+
+    app.get('/lol/get-odds', cache(3600), (req, res, next) => {
+        oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
+            .then((data) => {
+                getOdds(req).then(_data => res.status(200).send(_data)).catch(error => next(error));
             })
             .catch((error) => next(error));
     });
