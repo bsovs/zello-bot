@@ -83,6 +83,22 @@ class httpFactory {
 		});	
 	};
 
+	getBetOdds = (summonerName) => {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url: API_URL + `/lol/get-odds?summonerName=${summonerName}`,
+				type: "GET",
+				timeout: 15000,
+				success: (data) => {
+					resolve(JSON.parse(data));
+				},
+				error: (XMLHttpRequest, textStatus, errorThrown) => {
+					reject(errorThrown);
+				}
+			});
+		});
+	};
+
 	spinWheel = (betNumber, wager) => {
 		return new Promise((resolve, reject) => {
 			$.ajax({

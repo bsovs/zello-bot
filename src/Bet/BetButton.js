@@ -44,6 +44,7 @@ class BetButton extends Component {
                         : (<Button variant={this.props.variant}
                                    onClick={this.pressed}
                                    ref={this.inputRef}
+                                   disabled={this.props.disabled}
                             >
                             {this.props.message}
                         </Button>)

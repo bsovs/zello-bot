@@ -4,7 +4,7 @@ const database = require("../../database");
 const {MULTIPLIER} = require("../config/constants");
 const {safelyParseJSON} = require("../helper/helper");
 const {RANKED_SOLO} = require("../config/constants");
-const { RITO_KEY } = require('../config/constants'),
+const {RITO_KEY} = require('../config/constants'),
     {ErrorHandler} = require('../errors/errorHandler');
 
 let betIdCache = [];
@@ -17,7 +17,7 @@ betIdCache.splice(betIndex, 1);
 
 const checkBet = (req, res) => {
     const params = req.query;
-    const betId = params && params.betId
+    const betId = params && params.betId;
     oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
         .then((data) => {
             if (data) {
@@ -76,13 +76,15 @@ const searchMatch = (res, userData, bet, gameId) => {
             const participant = matchData.participants.find(p => p.participantId == participantIdentity.participantId);
 
             const didWin = participant.stats.win == bet.bet_specs.is_win;
+            const winnings = calcWinnings(bet);
 
             database.findAndUpdate('lol_bets', {"bet_id": bet.bet_id, "claimed": false}, {$set: {"claimed": true}})
                 .then((oldBet) => {
                     // TODO: copy over old bets to new database
 
+                    console.log('Winnings: ' + winnings);
                     if (didWin) {
-                        database.addOrUpdate('zbucks', {"id": userData.id}, {$inc: {"zbucks": (MULTIPLIER * parseInt(bet.bet_specs.wager))}})
+                        database.addOrUpdate('zbucks', {"id": userData.id}, {$inc: {"zbucks": winnings}})
                             .catch(error => {
                                 console.log(error);
                             });
@@ -94,12 +96,21 @@ const searchMatch = (res, userData, bet, gameId) => {
 
             res.status(200).send({
                 didWin: didWin,
-                winnings: didWin ? ('+' + bet.bet_specs.wager) : ('-' + bet.bet_specs.wager)
+                winnings: didWin ? ('+' + winnings) : ('-' + bet.bet_specs.wager)
             });
         } else res.status(200).send('Match Data Not Found');
     });
 };
 
+const calcWinnings = (bet) => {
+    try{
+        if(bet.bet_specs.bet_odds)
+            return Math.round(bet.bet_specs.bet_odds.return * parseInt(bet.bet_specs.wager));
+        else return Math.round(MULTIPLIER * parseInt(bet.bet_specs.wager));
+    }catch(e){
+        return Math.round(MULTIPLIER * parseInt(bet.bet_specs.wager));
+    }
+};
 
 module.exports = {
     checkBet
