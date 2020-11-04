@@ -29,6 +29,8 @@ const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
 const isDefined = (obj) => (typeof obj !== 'undefined');
 
 module.exports = {
@@ -36,5 +38,6 @@ module.exports = {
     stringToBool,
     validateSetBetParams,
     isDefined,
-    getRandomInt
+    getRandomInt,
+    reducer
 }
