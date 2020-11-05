@@ -84,7 +84,7 @@ class CaseOpeningParent extends Component {
                                 claimed={false}
                                 variant={this.props.isDark ? "light" : "dark"}
                                 onClick={this.openCase}
-                                disabled={!this.state.numKeys || this.state.numKeys < 1}
+                                disabled={!this.state.numKeys || this.state.numKeys < 1 || !this.state.numCases || this.state.numCases < 1}
                                 message={'Unlock'}
                             />
                         </Form.Group>

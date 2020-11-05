@@ -89,7 +89,7 @@ const updateDatabase = (userData, returnItem) => {
 const giveCases = () => {
     return database.findAll('zbucks', {}).then(users => {
         const user = users[getRandomInt(0, users.length)];
-        return database.addOrUpdate('user_items', {"id": user.id}, {$inc: {"cases": 1, "keys": 0}})
+        return database.addOrUpdate('user_items', {"id": user.id}, {$inc: {"keys": 0, "cases": 1}})
             .then(() => {
                 console.log(user);
                 return true;
@@ -99,7 +99,7 @@ const giveCases = () => {
 
 const buyKeys = (userData) => {
     return database.findAndUpdate('zbucks', {'id': userData.id}, {$inc: {'zbucks': (-125)}}).then(() =>
-        database.findAndUpdate('user_items', {'id': userData.id}, {$inc: {'keys': 1}})
+        database.addOrUpdate('user_items', {'id': userData.id}, {$inc: {'keys': 1, 'cases': 0}})
             .then(() => {
                 return JSON.stringify({"keys": 1});
             }).catch(() => Promise.reject(new ErrorHandler(500, 'Database Error')))
