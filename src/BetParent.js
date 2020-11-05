@@ -20,8 +20,8 @@ import { socket } from './Config/config';
 import LolBets from './Bet/LolBets';
 import MyBets from './Bet/MyBets';
 import BetsHome from './Bet/BetsHome';
-import Roulette from "./Bet/Roulette";
 import RouletteParent from "./Bet/RouletteParent";
+import CaseOpeningParent from "./Bet/CaseOpeningParent";
 
 class BetParent extends Component {
 
@@ -39,7 +39,9 @@ class BetParent extends Component {
 			socketConnected: (this.state.isWeb && this.state.socketConnected===null) ? false : true
 		});
 		
-		http.getProfile().then(profile=>this.setState({username: profile.username})).catch();
+		http.getProfile()
+			.then(profile=>this.setState({username: profile.username}))
+			.catch(error => console.log(error));
 		
 	};
 	
@@ -80,6 +82,11 @@ class BetParent extends Component {
 							</Link>
 						</Nav.Link>
 						<Nav.Link>
+							<Link to="/bets/cases">
+								OPEN CASES
+							</Link>
+						</Nav.Link>
+						<Nav.Link>
 							<Link to="/bets/lol-bets">
 								LOL BETS
 							</Link>
@@ -107,6 +114,7 @@ class BetParent extends Component {
 					<Route path='/bets/lol-bets' component={LolBets} />
 					<Route path='/bets/my-bets'><MyBets username={this.state.username} isDark={this.state.isDark} /></Route>
 					<Route path='/bets/roulette'><RouletteParent isDark={this.state.isDark} /></Route>
+					<Route path='/bets/cases'><CaseOpeningParent isDark={this.state.isDark} /></Route>
 				</Switch>
 
 			</main>

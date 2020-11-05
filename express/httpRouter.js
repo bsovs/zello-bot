@@ -6,6 +6,10 @@ const { HOME_PATH } = require('./config/constants');
 
 const database = require('../database');
 const oauth2 = require('./oauth/oauth2');
+const {getKeysAndCases} = require("./bets/caseItems");
+const {openCase} = require("./bets/caseItems");
+const {getKeys} = require("./bets/caseItems");
+const {getCaseItems} = require("./bets/caseItems");
 const {cache} = require("./helper/cache");
 const {getOdds} = require("./bets/odds");
 const {bankList} = require("./zbucks/bankList");
@@ -15,6 +19,8 @@ const { ALLOW_ORIGIN } = require('./config/constants')
 const { checkBet } = require('./bets/checkBet');
 const { setBet } = require('./bets/setBet');
 const { popularBets } = require('./bets/popularBets');
+const cronJob = require('./helper/cronJob');
+const {buyKeys} = require("./bets/caseItems");
 
 const start = function (app) {
 
@@ -36,6 +42,9 @@ const start = function (app) {
     // oauth2 routes
     oauth2.start(app, router);
 
+    // start crons
+    cronJob.startCrons();
+
     // -- pages routes -- //
 
     router.get('/', (req, res) => {
@@ -55,6 +64,9 @@ const start = function (app) {
         res.status(200).sendFile(path.join(HOME_PATH, 'build', 'index.html'));
     });
     router.get('/bets/roulette', (req, res) => {
+        res.status(200).sendFile(path.join(HOME_PATH, 'build', 'index.html'));
+    });
+    router.get('/bets/cases', (req, res) => {
         res.status(200).sendFile(path.join(HOME_PATH, 'build', 'index.html'));
     });
 
@@ -136,6 +148,49 @@ const start = function (app) {
             oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
                 .then((userData) => {
                     roulette(req.query, userData).then(_data => res.status(200).send(_data)).catch(error => next(error));
+                })
+                .catch((error) => next(error));
+        }
+    });
+
+    app.get('/bets/case-items', cache(30), (req, res, next) => {
+        getCaseItems().then(_data => res.status(200).send(_data)).catch(error => next(error));
+    });
+
+    app.get('/bets/keys', (req, res, next) => {
+        if (!req.cookies || (!req.cookies.discord_token && !req.cookies.discord_refresh_token)) {
+            throw new ErrorHandler(401, 'Not Authorized')
+        }
+        else {
+            oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
+                .then((userData) => {
+                    getKeysAndCases(userData).then(_data => res.status(200).send(_data)).catch(error => next(error));
+                })
+                .catch((error) => next(error));
+        }
+    });
+
+    app.post('/bets/open-case', (req, res, next) => {
+        if (!req.cookies || (!req.cookies.discord_token && !req.cookies.discord_refresh_token)) {
+            throw new ErrorHandler(401, 'Not Authorized')
+        }
+        else {
+            oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
+                .then((userData) => {
+                    openCase(userData).then(_data => res.status(200).send(_data)).catch(error => next(error));
+                })
+                .catch((error) => next(error));
+        }
+    });
+
+    app.post('/bets/buy-keys', (req, res, next) => {
+        if (!req.cookies || (!req.cookies.discord_token && !req.cookies.discord_refresh_token)) {
+            throw new ErrorHandler(401, 'Not Authorized')
+        }
+        else {
+            oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
+                .then((userData) => {
+                    buyKeys(userData).then(_data => res.status(200).send(_data)).catch(error => next(error));
                 })
                 .catch((error) => next(error));
         }

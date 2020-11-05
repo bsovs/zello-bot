@@ -115,6 +115,70 @@ class httpFactory {
 		});
 	};
 
+	openCase = () => {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url: API_URL + `/bets/open-case`,
+				type: "POST",
+				timeout: 15000,
+				success: (data) => {
+					resolve(JSON.parse(data));
+				},
+				error: (XMLHttpRequest, textStatus, errorThrown) => {
+					reject(errorThrown);
+				}
+			});
+		});
+	};
+
+	buyKeys = () => {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url: API_URL + `/bets/buy-keys`,
+				type: "POST",
+				timeout: 15000,
+				success: (data) => {
+					resolve(JSON.parse(data));
+				},
+				error: (XMLHttpRequest, textStatus, errorThrown) => {
+					reject(errorThrown);
+				}
+			});
+		});
+	};
+
+	getKeysAndCases  = () => {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url: API_URL + `/bets/keys`,
+				type: "GET",
+				timeout: 15000,
+				success: (data) => {
+					resolve(data);
+				},
+				error: (XMLHttpRequest, textStatus, errorThrown) => {
+					reject(errorThrown);
+				}
+			});
+		});
+	};
+
+	getCaseItems  = () => {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url: API_URL + `/bets/case-items`,
+				type: "GET",
+				timeout: 15000,
+				success: (data) => {
+					resolve(JSON.parse(data));
+				},
+				error: (XMLHttpRequest, textStatus, errorThrown) => {
+					reject(errorThrown);
+				}
+			});
+		});
+	};
+
 	getBankList = () => {
 		return new Promise((resolve, reject) => {
 			$.ajax({
