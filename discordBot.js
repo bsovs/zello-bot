@@ -28,7 +28,7 @@ const start = () => {
         .then(itemsList => {
             itemsList.forEach(item => {
                 if (item.name && item.command) {
-                    client.lockedCommands.set(item.name, require(`./commands/locked_commands/${item.command}`));
+                    client.lockedCommands.set(item.name.toLowerCase(), require(`./commands/locked_commands/${item.command}`));
                 }
             });
         })

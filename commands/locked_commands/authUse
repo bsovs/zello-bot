@@ -4,7 +4,7 @@ const {ErrorHandler} = require("../errors/errorHandler");
 const authUse = (author, command) => {
     return database.find('user_items', {"id": author.id})
         .then(userItems => {
-            if (!userItems)  return Promise.reject(new ErrorHandler('No User Present'));
+            if (!userItems)  return Promise.reject(new ErrorHandler('You do not own that item'));
 
             const item = userItems.items.find(item => item.name.toUpperCase() === command.toUpperCase());
             if (item) {
