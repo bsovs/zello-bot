@@ -66,7 +66,10 @@ const start = function (app) {
     router.get('/bets/roulette', (req, res) => {
         res.status(200).sendFile(path.join(HOME_PATH, 'build', 'index.html'));
     });
-    router.get('/bets/cases', (req, res) => {
+    router.get('/items', (req, res) => {
+        res.status(200).sendFile(path.join(HOME_PATH, 'build', 'index.html'));
+    });
+    router.get('/items/cases', (req, res) => {
         res.status(200).sendFile(path.join(HOME_PATH, 'build', 'index.html'));
     });
 

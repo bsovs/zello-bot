@@ -9,7 +9,7 @@ const stopCron = (chron) => {
 
 const startCrons = () => {
 
-    startCron(giveCases, 3600);
+    startCron(giveCases, 7200);
 
 };
 

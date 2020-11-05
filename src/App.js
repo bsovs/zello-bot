@@ -68,12 +68,18 @@ class App extends Component {
                         <Navbar.Brand><Link to="/">Home</Link></Navbar.Brand>
                         <Nav className="mr-auto">
                             {this.state.user
-                                ? (<Nav.Link>
+                                ? (<React.Fragment>
+                                    <Nav.Link>
                                         <Link to="/bets">
                                             BETS
                                         </Link>
                                     </Nav.Link>
-                                )
+                                    <Nav.Link>
+                                        <Link to="/items">
+                                          ITEMS/CASES
+                                        </Link>
+                                    </Nav.Link>
+                                </React.Fragment>)
                                 : (<Nav.Link href="/api/discord">
                                         Authorize App
                                     </Nav.Link>
@@ -88,7 +94,7 @@ class App extends Component {
                 </header>
                 <main>
 
-                    <h1>Zello Bot</h1>
+                    <h1>ZELLO BOT</h1>
 
                     {this.state.user
                         ? (

@@ -38,8 +38,8 @@ const start = function (app, router) {
             res.cookie('user', true, {});
 
             module.exports.getUserId(req, res, info.access_token)
-                .then(() => res.redirect(global.URL+'/bets'))
-                .catch(() => res.redirect(global.URL+'/bets'));
+                .then(() => res.redirect(global.URL+'/'))
+                .catch(() => res.redirect(global.URL+'/'));
         }).catch(error => {
             console.error("[oauth2.js]", error);
         });
@@ -48,7 +48,7 @@ const start = function (app, router) {
     router.get('/api/discord', (req, res) => {
         if (!req.cookies || !req.cookies.discord_token) {
             if (req.cookies && req.cookies.discord_refresh_token) module.exports.refreshToken(req, res, req.cookies.discord_refresh_token)
-                .then(() => res.status(200).redirect('/bets'))
+                .then(() => res.status(200).redirect('/'))
                 .catch(() => res.redirect(req.originalUrl));
             else {
                 res.redirect(`https://discordapp.com/api/oauth2/authorize?client_id=${oauth2.client_id}&scope=${oauth2.scope}&response_type=code&redirect_uri=${oauth2.redirect_uri}/api/discord/callback`);

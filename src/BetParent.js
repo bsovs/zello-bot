@@ -21,7 +21,7 @@ import LolBets from './Bet/LolBets';
 import MyBets from './Bet/MyBets';
 import BetsHome from './Bet/BetsHome';
 import RouletteParent from "./Bet/RouletteParent";
-import CaseOpeningParent from "./Bet/CaseOpeningParent";
+import CaseOpeningParent from "./Items/CaseOpeningParent";
 
 class BetParent extends Component {
 
@@ -79,11 +79,6 @@ class BetParent extends Component {
 						<Nav.Link>
 							<Link to="/bets/roulette">
 								Roulette
-							</Link>
-						</Nav.Link>
-						<Nav.Link>
-							<Link to="/bets/cases">
-								OPEN CASES
 							</Link>
 						</Nav.Link>
 						<Nav.Link>

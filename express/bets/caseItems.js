@@ -7,7 +7,7 @@ const ITEM_TYPES = [
     {'class': 'COMMON', 'weight': 200, 'color': '#d1fff8'},
     {'class': 'RARE', 'weight': 50, 'color': '#50f52f'},
     {'class': 'LEGENDARY', 'weight': 15, 'color': '#fc401e'},
-    {'class': 'MYTHIC', 'weight': 2, 'color': '#db25d5'}
+    {'class': 'MYTHIC', 'weight': 4, 'color': '#db25d5'}
 ];
 
 const getCaseItems = () => {
@@ -27,7 +27,7 @@ const getKeysAndCases = (userData) => {
 };
 
 const addKeysAndCases = (userData, numKeys, numCases) => {
-    return database.findAndUpdate('user_items', {"id": userData.id}, {
+    return database.addOrUpdate('user_items', {"id": userData.id}, {
         $inc: {
             "keys": (numKeys),
             "cases": (numCases)
@@ -89,17 +89,17 @@ const updateDatabase = (userData, returnItem) => {
 const giveCases = () => {
     return database.findAll('zbucks', {}).then(users => {
         const user = users[getRandomInt(0, users.length)];
-        return database.addOrUpdate('user_items', {"id": user.id}, {$inc: {"keys": 0, "cases": 1}})
-            .then(() => {
-                console.log(user);
-                return true;
-            }).catch(() => Promise.reject(new ErrorHandler(500, 'Database Error')));
+        return addKeysAndCases(user, 0, 1)
+            .then(success => {
+                console.log('CASE GIVEN TO: ', user.username)
+                return success;
+            }).catch(() => Promise.reject(new ErrorHandler(500, 'Database Error')))
     }).catch(() => Promise.reject(new ErrorHandler(500, 'Database Error')));
 };
 
 const buyKeys = (userData) => {
     return database.findAndUpdate('zbucks', {'id': userData.id}, {$inc: {'zbucks': (-125)}}).then(() =>
-        database.addOrUpdate('user_items', {'id': userData.id}, {$inc: {'keys': 1, 'cases': 0}})
+        addKeysAndCases(userData, 1, 0)
             .then(() => {
                 return JSON.stringify({"keys": 1});
             }).catch(() => Promise.reject(new ErrorHandler(500, 'Database Error')))

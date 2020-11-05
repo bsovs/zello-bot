@@ -4,7 +4,7 @@ import {http} from "../httpFactory";
 
 import {Button, Spinner, Form, Input} from 'react-bootstrap';
 import CaseOpeningRenderer from "./CaseOpeningRenderer";
-import BetButton from "./BetButton";
+import BetButton from "../Bet/BetButton";
 
 class CaseOpeningParent extends Component {
     constructor(props) {
@@ -85,7 +85,7 @@ class CaseOpeningParent extends Component {
                                 variant={this.props.isDark ? "light" : "dark"}
                                 onClick={this.openCase}
                                 disabled={!this.state.numKeys || this.state.numKeys < 1 || !this.state.numCases || this.state.numCases < 1}
-                                message={'Unlock'}
+                                message={'Unlock 🔐'}
                             />
                         </Form.Group>
                         <Form.Label>
@@ -99,7 +99,7 @@ class CaseOpeningParent extends Component {
                                         variant={this.props.isDark ? "light" : "dark"}
                                         onClick={this.buyKeys}
                                         disabled={this.state.numKeys && this.state.numKeys > 0}
-                                        message={'BUY-KEY'}
+                                        message={'BUY 🔑'}
                                     /></th>
                                 </tr>
                                 </thead>

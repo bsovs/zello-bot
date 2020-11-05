@@ -10,7 +10,7 @@ const ALLOW_ORIGIN = !process.env.PORT ? [`http://localhost:8080`, `http://local
 
 const HOME_PATH = __dirname + '/../../';
 
-const ROULETTE_SIZE = 32;
+const ROULETTE_SIZE = 31;
 
 module.exports = {
     MULTIPLIER,

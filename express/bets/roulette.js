@@ -1,13 +1,16 @@
 const database = require("../../database");
+const {addKeysAndCases} = require("./caseItems");
 const {ErrorHandler} = require("../errors/errorHandler");
 const {getRandomInt} = require('../helper/helper');
 const {ROULETTE_SIZE} = require("../config/constants");
 
 const roulette = (params, userData) => {
-    const wheelNumber = getRandomInt(0, ROULETTE_SIZE-1);
+    const wheelNumber = getRandomInt(0, ROULETTE_SIZE);
 
     const winnings = calcWinnings(wheelNumber, params.betNumber, params.wager);
     console.log(userData.username, params, '#'+wheelNumber, '$'+winnings);
+
+    if (wheelNumber === 0 &&  parseInt(params.wager) >= 20) addKeysAndCases(userData, 1, 0).catch(e => {console.log(e)});
 
     return database.addOrUpdate('zbucks', {"id": userData.id}, {$inc: {"zbucks": winnings}})
         .then(() => {
@@ -27,7 +30,7 @@ const calcWinnings = (wheelNumber, betNumber, wager) => {
             return ((didWin ? 1 : -1) * parseInt(wager));
         }
         else {
-            const didWin = (parseInt(betNumber) === wheelNumber);
+            const didWin = (wheelNumber !== 0) && (parseInt(betNumber) === wheelNumber);
             return ((didWin ? ROULETTE_SIZE : -1) * parseInt(wager));
         }
     }catch(e){

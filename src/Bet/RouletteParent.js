@@ -12,7 +12,7 @@ import {MOCKED_BET} from "./mocked_bet";
 import Roulette from "./Roulette";
 
 const data = [
-    {option: '0', style: {backgroundColor: 'green', textColor: 'black'}},
+    {option: '🔑', style: {backgroundColor: 'green', textColor: 'black'}},
 ];
 const odd = {option: '1', style: {backgroundColor: 'black',  textColor: 'white'}};
 const even = {option: '2', style: {backgroundColor: 'red',  textColor: 'white'}}
@@ -24,7 +24,7 @@ for(let i=1; i<32; i++){
 }
 
 const initState = {
-    betNumber: 0,
+    betNumber: 1,
     wager: 5,
     prizeNumber : -1,
     winnings: 0,
@@ -119,7 +119,7 @@ class RouletteParent extends Component {
                                         : (<React.Fragment>
                                                 <option disabled>Bet Number</option>
                                                 {
-                                                    data.map(slot => (
+                                                    data.filter(s => s.option !== '🔑').map(slot => (
                                                         <option style={slot.style}>{slot.option}</option>
                                                     ))
                                                 }
@@ -137,9 +137,12 @@ class RouletteParent extends Component {
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Z-Bucks Wager: ${wager}</Form.Label>
+                            <Form.Text className="text-muted">
+                                (20 zBucks for a chance at a key!)
+                            </Form.Text>
                             <Form.Control type="range" onChange={this.setWager}
                                           value={wager}
-                                          min={0}
+                                          min={1}
                                           max={20}
                             />
                             <BetButton
