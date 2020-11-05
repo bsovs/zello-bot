@@ -34,6 +34,7 @@ module.exports = {
 		});
 	},
 	image(message, url){
+		console.log(url);
 		let val = {};
 			val.files = (Array.isArray(url) ? url : [url]);
 		message.channel.send(val);

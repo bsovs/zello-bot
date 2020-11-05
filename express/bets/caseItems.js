@@ -27,7 +27,12 @@ const getKeysAndCases = (userData) => {
 };
 
 const addKeysAndCases = (userData, numKeys, numCases) => {
-    return database.findAndUpdate('user_items', {"id": userData.id}, {$inc: {"keys": (numKeys), "cases": (numCases)}}).then(_ => {
+    return database.findAndUpdate('user_items', {"id": userData.id}, {
+        $inc: {
+            "keys": (numKeys),
+            "cases": (numCases)
+        }
+    }).then(_ => {
         return true;
     }).catch(error => {
         throw new ErrorHandler(500, 'Database Error');
@@ -48,7 +53,9 @@ const openCase = (userData) => {
 
 const useKey = (userData) => {
     return database.findAndUpdate('user_items', {"id": userData.id}, {$inc: {"keys": (-1), "cases": (-1)}}).then(_ => {
-        return randomItem().then(returnItem => updateDatabase(userData, returnItem)).catch(error => { throw error });
+        return randomItem().then(returnItem => updateDatabase(userData, returnItem)).catch(error => {
+            throw error
+        });
     }).catch(error => {
         throw new ErrorHandler(500, 'Database Error');
     });
@@ -60,9 +67,9 @@ const randomItem = () => {
             const itemsList = JSON.parse(items).items;
             const typeValues = ITEM_TYPES.map(itemType => itemType.weight);
             const randNum = getRandomInt(0, typeValues.reduce(reducer));
-            const itemValue = ITEM_TYPES.find(itemType => (randNum <= typeValues.slice(0, typeValues.indexOf(itemType.weight)+1).reduce(reducer)));
-            const itemsOfClass = itemsList.filter(item => item.class.toUpperCase() === itemValue.class.toUpperCase() );
-            const itemNum = getRandomInt(0, itemsOfClass.length-1);
+            const itemValue = ITEM_TYPES.find(itemType => (randNum <= typeValues.slice(0, typeValues.indexOf(itemType.weight) + 1).reduce(reducer)));
+            const itemsOfClass = itemsList.filter(item => item.class.toUpperCase() === itemValue.class.toUpperCase());
+            const itemNum = getRandomInt(0, itemsOfClass.length - 1);
 
             console.log(itemsOfClass[itemNum]);
 
@@ -79,9 +86,31 @@ const updateDatabase = (userData, returnItem) => {
     });
 };
 
+const giveCases = () => {
+    return database.findAll('zbucks', {}).then(users => {
+        const user = users[getRandomInt(0, users.length)];
+        return database.addOrUpdate('user_items', {"id": user.id}, {$inc: {"cases": 1, "keys": 0}})
+            .then(() => {
+                console.log(user);
+                return true;
+            }).catch(() => Promise.reject(new ErrorHandler(500, 'Database Error')));
+    }).catch(() => Promise.reject(new ErrorHandler(500, 'Database Error')));
+};
+
+const buyKeys = (userData) => {
+    return database.findAndUpdate('zbucks', {'id': userData.id}, {$inc: {'zbucks': (-125)}}).then(() =>
+        database.findAndUpdate('user_items', {'id': userData.id}, {$inc: {'keys': 1}})
+            .then(() => {
+                return JSON.stringify({"keys": 1});
+            }).catch(() => Promise.reject(new ErrorHandler(500, 'Database Error')))
+    ).catch(() => Promise.reject(new ErrorHandler(500, 'Database Error')));
+}
+
 module.exports = {
     getCaseItems,
     getKeysAndCases,
     addKeysAndCases,
-    openCase
+    openCase,
+    giveCases,
+    buyKeys
 }

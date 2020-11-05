@@ -16,7 +16,8 @@ class CaseOpeningParent extends Component {
             numCases: 0,
             prize: 0,
             itemsList: [],
-            itemTypes: []
+            itemTypes: [],
+            showPrize: false
         };
     }
 
@@ -35,22 +36,39 @@ class CaseOpeningParent extends Component {
                 this.setState({
                     mustSpin: true,
                     prize: _data.item,
-                    stopSpinning: false
+                    stopSpinning: false,
+                    showPrize: false,
+                    numKeys:  this.state.numKeys-1,
+                    numCases: this.state.numCases-1
                 }, this.startedSpinning))
             .catch(err => console.log(err));
     };
 
+    buyKeys = () => {
+        return http.buyKeys()
+            .then(_data =>
+                this.setState({
+                    numKeys:  this.state.numKeys + _data.keys,
+                }))
+            .catch(err => console.log(err));
+    };
+
     resetSpin = () => {
-        this.setState({mustSpin: false, stopSpinning: true});
+        this.setState({
+            mustSpin: false,
+            stopSpinning: true,
+            showPrize: true
+        });
     }
 
     render() {
-        const {mustSpin, itemsList, itemTypes, prize, stopSpinning} = this.state;
+        const {mustSpin, itemsList, itemTypes, prize, stopSpinning, showPrize} = this.state;
 
         return (<React.Fragment>
             {itemsList && itemsList.length > 0 &&
             (<React.Fragment>
                 <CaseOpeningRenderer
+                    callback={this.resetSpin}
                     mustSpin={mustSpin}
                     itemsList={itemsList}
                     itemTypes={itemTypes}
@@ -59,6 +77,7 @@ class CaseOpeningParent extends Component {
                     isDark={this.props.isDark}
                 />
                 <fieldset disabled={this.state.mustSpin ? 'disabled' : false}>
+                    {showPrize && prize && (<h3>{prize.command.toUpperCase()}: !{prize.name}</h3>)}
                     <Form>
                         <Form.Group>
                             <BetButton
@@ -70,8 +89,28 @@ class CaseOpeningParent extends Component {
                             />
                         </Form.Group>
                         <Form.Label>
-                            <p> Keys: {this.state.numKeys} </p>
-                            <p>Cases: {this.state.numCases} </p>
+                            <table className="text">
+                                <thead>
+                                <tr>
+                                    <th>CASES</th>
+                                    <th>KEYS</th>
+                                    <th><BetButton
+                                        claimed={false}
+                                        variant={this.props.isDark ? "light" : "dark"}
+                                        onClick={this.buyKeys}
+                                        disabled={this.state.numKeys && this.state.numKeys > 0}
+                                        message={'BUY-KEY'}
+                                    /></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>{this.state.numCases}</td>
+                                    <td>{this.state.numKeys}</td>
+                                    <td>125 zBucks</td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </Form.Label>
                     </Form>
                 </fieldset>

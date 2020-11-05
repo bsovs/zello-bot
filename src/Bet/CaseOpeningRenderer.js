@@ -14,6 +14,7 @@ class CaseOpeningRenderer extends React.Component {
             aniSpeed: INIT_ANI_SPEED,
             slideNumber: 0,
             prizeNumber: 0,
+            prevPrizeNumber: 0,
             width: 0, height: 0
         };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -33,27 +34,34 @@ class CaseOpeningRenderer extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.prize && this.props.mustSpin && !prevProps.mustSpin) {
-            const prizeNumber = this.props.itemsList && this.props.itemsList.indexOf(this.props.itemsList.find(item => item.name === this.props.prize.name));
-            const lengthShift = this.props.itemsList.length + 100;
+        if (this.props.prize && this.props.mustSpin && !prevProps.mustSpin && this.props.itemsList) {
+            const prizeNumber = this.props.itemsList.indexOf(this.props.itemsList.find(item => item.name === this.props.prize.name));
+            const lengthShift = this.props.itemsList.length * (Math.ceil(100/this.props.itemsList.length)) + Math.floor(this.state.prevPrizeNumber/this.props.itemsList.length)*this.props.itemsList.length;
             this.setState({
                 prizeNumber: prizeNumber + lengthShift,
             }, this.startSpin);
         }
     }
 
+    reset = () => {
+        this.setState({
+            prevPrizeNumber: this.state.prizeNumber
+        }, this.props.callback);
+    }
+
     startSpin = () => {
         const timer = setInterval(this.updateSpeed, 15);
+
         this.setState({
-            slideNumber: 0,
+            slideNumber: this.state.prevPrizeNumber,
             timer: timer
-        });
+        }, () => setTimeout(this.reset, 16000));
     }
 
     updateSpeed = () => {
         let inc;
-        if (this.state.slideNumber < 6) inc = (-1) * ((INIT_ANI_SPEED / 6) - (10 * 9));
-        else if (this.state.slideNumber >= PRIZE_SLIDE - SLIDE_INC) inc = (500);
+        if (this.state.slideNumber < this.state.prevPrizeNumber + 6) inc = (-1) * ((INIT_ANI_SPEED / 6) - (10 * 9));
+        else if (this.state.slideNumber >=  this.state.prizeNumber - SLIDE_INC) inc = (500);
         else inc = (0)
 
         if (this.state.slideNumber >= this.state.prizeNumber) clearInterval(this.state.timer);

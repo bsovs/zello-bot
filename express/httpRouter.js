@@ -19,6 +19,8 @@ const { ALLOW_ORIGIN } = require('./config/constants')
 const { checkBet } = require('./bets/checkBet');
 const { setBet } = require('./bets/setBet');
 const { popularBets } = require('./bets/popularBets');
+const cronJob = require('./helper/cronJob');
+const {buyKeys} = require("./bets/caseItems");
 
 const start = function (app) {
 
@@ -39,6 +41,9 @@ const start = function (app) {
 
     // oauth2 routes
     oauth2.start(app, router);
+
+    // start crons
+    cronJob.startCrons();
 
     // -- pages routes -- //
 
@@ -173,6 +178,19 @@ const start = function (app) {
             oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
                 .then((userData) => {
                     openCase(userData).then(_data => res.status(200).send(_data)).catch(error => next(error));
+                })
+                .catch((error) => next(error));
+        }
+    });
+
+    app.post('/bets/buy-keys', (req, res, next) => {
+        if (!req.cookies || (!req.cookies.discord_token && !req.cookies.discord_refresh_token)) {
+            throw new ErrorHandler(401, 'Not Authorized')
+        }
+        else {
+            oauth2.getUserId(req, res, req.cookies.discord_token, req.cookies.discord_refresh_token)
+                .then((userData) => {
+                    buyKeys(userData).then(_data => res.status(200).send(_data)).catch(error => next(error));
                 })
                 .catch((error) => next(error));
         }

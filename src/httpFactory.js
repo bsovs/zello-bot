@@ -131,6 +131,22 @@ class httpFactory {
 		});
 	};
 
+	buyKeys = () => {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url: API_URL + `/bets/buy-keys`,
+				type: "POST",
+				timeout: 15000,
+				success: (data) => {
+					resolve(JSON.parse(data));
+				},
+				error: (XMLHttpRequest, textStatus, errorThrown) => {
+					reject(errorThrown);
+				}
+			});
+		});
+	};
+
 	getKeysAndCases  = () => {
 		return new Promise((resolve, reject) => {
 			$.ajax({
