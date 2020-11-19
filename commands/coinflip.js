@@ -10,12 +10,12 @@ const EMPTY_ACCOUNT = {"id": null, "username": null, "server_id": null, "zbucks"
 
 const validate = (message, args) => {
     args = args.filter(arg => !Discord.MessageMentions.USERS_PATTERN.test(arg) && _.toNumber(arg));
-    if (!args[0]) return reject(message);
+    if (!args[0] || _.toNumber(args[0]) <= 0) return reject(message);
     else return args;
 };
 
 const reject = (message) => {
-    reply.to(message, message.author, 'Please enter a wager amount');
+    reply.to(message, message.author, 'Please enter a valid wager amount');
     return false;
 };
 
