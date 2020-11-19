@@ -1,0 +1,5004 @@
+{
+  "matches": [
+    {
+      "platformId": "NA1",
+      "gameId": 3645332552,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604371636751,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3645225571,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604369538385,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3645198356,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604367765564,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3645048360,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604364491658,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3645012240,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604362337448,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3644935397,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604360089923,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3644921247,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604358264200,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3644573977,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604349966875,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3643748901,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604289718172,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3643503044,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604276867763,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3643397744,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604274821736,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3643378810,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604271887700,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3643373954,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604269937525,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3643269175,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604267707685,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3643233652,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604261952135,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3643104106,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604257128135,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3643068261,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604254777371,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3640357278,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604097730575,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3640322669,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604095645858,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3639001179,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604024828480,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3638677801,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604011521699,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3638672684,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604009457503,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3638558400,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604007703854,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3638573466,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604005619853,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3638494360,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1604001552996,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3638449464,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603999084357,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3638473836,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603996138320,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3637705597,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603940156230,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3637628033,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603938071768,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3637619747,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603935730143,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3637553368,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603933866718,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3637476610,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603931634381,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3637450530,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603929511809,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3635759452,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603839102133,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3635544406,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603832150107,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3635600018,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603830284126,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3635415925,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603828152817,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3635299406,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603824297592,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3635294841,
+      "champion": 202,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603821697133,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3630534540,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603513160427,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3630478301,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603511451636,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3630341858,
+      "champion": 81,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603503865562,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3629090929,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603428398393,
+      "role": "DUO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3628474019,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603400732561,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3628439254,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603398615116,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3628421533,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603394316419,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3628346591,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603391437599,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3628382536,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603389780451,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3627772688,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603340656821,
+      "role": "DUO_CARRY",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3627724781,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603338579626,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3627392740,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603322585416,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3627289395,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603320660603,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3627340515,
+      "champion": 8,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603317266138,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3627278287,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603316160931,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3627233294,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603313501012,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3627211485,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603312074111,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3627194892,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603309351646,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3626046476,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603243817742,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3625928486,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603241359909,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3625940680,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603238851742,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3625816575,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603236595099,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3625692907,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603225940741,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3625627283,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603222965456,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3625602256,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603219842257,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3625596362,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603217227787,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3625477314,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603211390159,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3625472085,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603208487542,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3625456374,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603206139833,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3624671353,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603156301244,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3624553808,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603153703141,
+      "role": "DUO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3624373049,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603141719062,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3624327559,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603139304432,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3623090006,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603058416638,
+      "role": "SOLO",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3622883537,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603055937274,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3622762198,
+      "champion": 81,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603050764293,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3622725827,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603048125917,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3622661773,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603045615951,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3622611555,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1603040516809,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3621580185,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602972450775,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3621495778,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602970473587,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3621473212,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602969169922,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3621449073,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602967492039,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3621424101,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602965191751,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3621359698,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602963086683,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3621335419,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602960732956,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3620556423,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602902749470,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3620512538,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602901485342,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3620368015,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602896971208,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3620299106,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602893813439,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3619727737,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602875100874,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3618459617,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602786775860,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3618416796,
+      "champion": 81,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602784773190,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3617616970,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602727485129,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3617476086,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602721006153,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3617386310,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602717077505,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3617371351,
+      "champion": 8,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602714883453,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3617230871,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602704973221,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3617177078,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602703013915,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3617142742,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602700660156,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3617117661,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602697979451,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3616124763,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602642526440,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3616028049,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602640240352,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3616031368,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602638164565,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3615880910,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602630450411,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3615834080,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602627551332,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3615748973,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602625586249,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3614363922,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602542877940,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3614297816,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602540333423,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3614196974,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602534962435,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3614220764,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602532638922,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3614156309,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602530432698,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3614122386,
+      "champion": 81,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602527888491,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3614097506,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602526080605,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3612776829,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602439046246,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3611304247,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602354603048,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3610274848,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602286085802,
+      "role": "DUO_CARRY",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3608774917,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602196228521,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3608760006,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602193991260,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3608694720,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602191449334,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3608680351,
+      "champion": 498,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602189037570,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3608605985,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602186594519,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3608591385,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602183646963,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3608557340,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602182218056,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3608005411,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602129572631,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3607947054,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602127041620,
+      "role": "DUO_SUPPORT",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3607899972,
+      "champion": 8,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602124700329,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3607821587,
+      "champion": 60,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602121785070,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3607790202,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602118611680,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3607702506,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602115887340,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3606140900,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602023946862,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3606101505,
+      "champion": 60,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602020021571,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3606007005,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602017465141,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3606050451,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602014695284,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3605960812,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1602009482504,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3604979022,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601940394568,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3605003966,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601938452637,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3604926723,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601935262026,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3604900940,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601932407919,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3604846257,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601930275174,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3604783868,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601923739727,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3603952961,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601858357965,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3603874699,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601855472531,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3602308174,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601771819528,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3602320448,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601769137251,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3602284633,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601767044906,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3602199192,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601764680608,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3602060416,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601752769117,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3601955441,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601750263395,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3601991936,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601748871415,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3601907539,
+      "champion": 76,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601746538253,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3601299734,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601697512141,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3601061610,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601686242530,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3601025434,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601684226730,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3599690232,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601605817127,
+      "role": "DUO",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3599624430,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601604237056,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3599536381,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601601856004,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3599488429,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601599561295,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3599099222,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601579302129,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3599131263,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601574535103,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3598173230,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601503663406,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3596661821,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601407191291,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3596607848,
+      "champion": 61,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601404983324,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3596485069,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601396492128,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3595320149,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601328036450,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3595283130,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601325248176,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3595239884,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601323001473,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3594474531,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601260565972,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3594233078,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601246691181,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3591570226,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601083017738,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3591503477,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601080707146,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3591322440,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601071891222,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3591107040,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601060040868,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3591132620,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601057813575,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3591088423,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601055859272,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3591056059,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601054195767,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3591082083,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1601052296024,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3589809005,
+      "champion": 84,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600987382916,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3589669855,
+      "champion": 103,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600973879894,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3589575493,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600971444982,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3588625472,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600902733586,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3588630669,
+      "champion": 84,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600900826148,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3588563829,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600897880212,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3588484828,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600893785871,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3588294222,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600883792479,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3588341053,
+      "champion": 114,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600882169584,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3586608580,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600802290059,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3586554633,
+      "champion": 114,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600800103450,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3583786984,
+      "champion": 114,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600636466277,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3583669032,
+      "champion": 39,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600629136682,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3581273910,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600486436128,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3581153792,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600483335492,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3580770845,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600459564985,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3580693854,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600456205862,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3580429439,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600453976776,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3580445452,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600451765422,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3579646963,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600398927673,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3579012151,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1600362363125,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3569932585,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1599755279457,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3549558585,
+      "champion": 121,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1598378078404,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3362323489,
+      "champion": 60,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1586129628966,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3362248112,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1586127836951,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3362223316,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1586125904675,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3362154329,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1586122930417,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3362081522,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1586118602425,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3362016542,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1586116792369,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3360394451,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1586040089927,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3360226216,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1586031181915,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3360199943,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1586028590840,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3360153668,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1586026642218,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3356753186,
+      "champion": 202,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1585857867867,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3356726882,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1585855517946,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3356671894,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1585853291880,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3352842851,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1585682773187,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3352795128,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1585680150267,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3352771789,
+      "champion": 55,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1585678147219,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3338732170,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1584993894365,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3338627841,
+      "champion": 67,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1584991927069,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3337413754,
+      "champion": 81,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1584919962761,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3337450728,
+      "champion": 202,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1584919419941,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3337297033,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1584915536861,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3337299854,
+      "champion": 163,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1584913367692,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3322304599,
+      "champion": 81,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1584044734999,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3322281456,
+      "champion": 145,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1584042580875,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3322228409,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1584040609359,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3322207037,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1584038843931,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3322232717,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1584036483819,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3321486216,
+      "champion": 81,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583958604654,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3321472779,
+      "champion": 13,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583956240152,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3321500321,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583955229694,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3321428273,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583953175864,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3321415090,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583950523355,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3319031406,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583710475340,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3318986893,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583708739152,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3318858822,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583705423612,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3318873693,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583703383103,
+      "role": "DUO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3318658454,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583701396291,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3314985519,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583354811064,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3314953073,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583352832254,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3312262468,
+      "champion": 76,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583106636037,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3312197918,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583104586287,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3311618887,
+      "champion": 8,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583046549046,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3311612261,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583043737353,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3311523764,
+      "champion": 60,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583041494035,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3310847812,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583006781230,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3310851944,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583004197902,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3310809812,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1583001545682,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3310776213,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582999995471,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3310457726,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582956908312,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3310472065,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582955093168,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3310433764,
+      "champion": 268,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582952746033,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3310336242,
+      "champion": 81,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582949434977,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3310317430,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582947314236,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3309990982,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582921157229,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3309937401,
+      "champion": 81,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582918686665,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3309946285,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582918093183,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3309934252,
+      "champion": 81,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582916263812,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3309495232,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582870610539,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3309378868,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582867984323,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3309353835,
+      "champion": 60,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582865780677,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3309314541,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582863285938,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3309257723,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582860815582,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3309230357,
+      "champion": 76,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582857643998,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3308594610,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582779072286,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3308562048,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582777300949,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3308514639,
+      "champion": 76,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582774836198,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3305848866,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582506769371,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3305804964,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582504752616,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3301476779,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582149677887,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3301456395,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582147519948,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3301431893,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582144079784,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3301398498,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582141802764,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3300929507,
+      "champion": 145,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582089696152,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3300944032,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582087988198,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3300874782,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582085131171,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3300821922,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582083855001,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3300752705,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582081390678,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3300646226,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582079209885,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3300569452,
+      "champion": 121,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582076946624,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3300584598,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582075561990,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3300467869,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582068955568,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3300425518,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582067297311,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3300443260,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1582066504556,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3299388208,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1581965142424,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3298524295,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1581899863739,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3298389644,
+      "champion": 67,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1581898174248,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3298374904,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1581896342331,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3298308075,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1581893867074,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3298323733,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1581892279621,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3298225349,
+      "champion": 145,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1581888846751,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3298168865,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1581886274549,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3297788339,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1581834446638,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3297782189,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1581832295176,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3297724925,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1581829936807,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3287427008,
+      "champion": 202,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580942858721,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3287433834,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580941254656,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3287430027,
+      "champion": 8,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580939197634,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3287346839,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580937069394,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3287373756,
+      "champion": 55,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580935257015,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3286668943,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580878014436,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3286631640,
+      "champion": 55,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580875436599,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3286595256,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580873525300,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3286569879,
+      "champion": 145,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580871691442,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3285786008,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580788149371,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3285737601,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580785749085,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3285772778,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1580784506085,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3266014203,
+      "champion": 55,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1579202591855,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3264406844,
+      "champion": 157,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1579064978817,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3264410905,
+      "champion": 76,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1579062619921,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3264356166,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1579060891392,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3264306286,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1579057925344,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3263319866,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578979380403,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3263293473,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578977323428,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3263257322,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578975356761,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3263212370,
+      "champion": 76,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578973327715,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3263145405,
+      "champion": 76,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578971075743,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3263140919,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578969667452,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3262441928,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578888283835,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3261916706,
+      "champion": 76,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578865865213,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3261961104,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578864065120,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3261706722,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578861910150,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3261770097,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578859680690,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3260583811,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578768961479,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3260580868,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578767500291,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3260575389,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578765338685,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3260542320,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578762971029,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3260229022,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578723725358,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3260272441,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578721729873,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3260184363,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578719014881,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3259410305,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578685638680,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3259367564,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578683755135,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3259383569,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578680620646,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3259370276,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578677630793,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3259328253,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578675683590,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3256226452,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578362065579,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3256241073,
+      "champion": 55,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1578360607410,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3211842501,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1574231819518,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3210358564,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1574112947527,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3210372944,
+      "champion": 51,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1574109792932,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3195673852,
+      "champion": 38,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1572845073161,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3195627521,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1572843041421,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3195596922,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1572842374108,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3194061899,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1572721108382,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3191049026,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1572461689775,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3175960476,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1571255111682,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3175917721,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1571253057273,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3175916872,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1571252423185,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3171167241,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1570820125785,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3171193656,
+      "champion": 8,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1570817647645,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3159754720,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1569611716711,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3156184813,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1569184966117,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3155064394,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1569091710427,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3155046764,
+      "champion": 76,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1569089360663,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3155018594,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1569086598024,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3144353194,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1567880763715,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3144315506,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1567878198608,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3124683282,
+      "champion": 8,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565910407805,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3124663707,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565908143744,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3124633748,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565905595305,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3124560789,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565898874360,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3124531828,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565895931533,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3124512560,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565892835231,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3124001142,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565830379848,
+      "role": "DUO",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3123960370,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565828197630,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3123921647,
+      "champion": 114,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565826322839,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3123877749,
+      "champion": 8,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565823220374,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3123769766,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565813079963,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3123740404,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565810225145,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3123734069,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565808353931,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3122990515,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565747113092,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3122930515,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565743272165,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3122831345,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565736591422,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3122785110,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565732252099,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3122725790,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565726443830,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3122707550,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565723673608,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3122656652,
+      "champion": 8,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565719626306,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3122623448,
+      "champion": 268,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565713856903,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121962548,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565661358032,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121944970,
+      "champion": 268,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565659951629,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121902048,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565657465646,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121883733,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565655858654,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121745038,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565646556816,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121735560,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565644010651,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121703713,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565640441071,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121665670,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565637724807,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121660398,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565635914361,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121635336,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565634081781,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121175377,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565574104432,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121164646,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565572230483,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121113868,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565570063743,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3121043946,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565563805742,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3120905179,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565554580821,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3120876483,
+      "champion": 268,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565552342161,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3120870064,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565550582399,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3120084510,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565464201594,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3118981210,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565372844931,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3118570579,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565316392607,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3118403447,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565306367053,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3117681413,
+      "champion": 268,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565223120172,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3117653773,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565221430593,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3117524624,
+      "champion": 114,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565209120153,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3116799695,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565142370342,
+      "role": "DUO_CARRY",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3116754703,
+      "champion": 268,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565139526754,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3116721493,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1565136807560,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3114628883,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1564945618257,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3114612758,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1564943798296,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3113755072,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1564852662680,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3113727614,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1564849760489,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3112054389,
+      "champion": 236,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1564697666687,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3109045455,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1564424846192,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3109019366,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1564422642638,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3104634313,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563994779312,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3103734449,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563925929594,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3103485678,
+      "champion": 268,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563905452825,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3102470083,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563819314858,
+      "role": "DUO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3096335721,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563302754563,
+      "role": "DUO_CARRY",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3096308436,
+      "champion": 245,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563300100700,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3095531733,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563239966892,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3095500023,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563237865981,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3095340008,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563226157537,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3095267281,
+      "champion": 202,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563220092770,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3095238976,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563217419826,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3095241399,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563214996897,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3094804249,
+      "champion": 141,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563158564822,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3093539206,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563044730419,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3093528996,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1563042726208,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3092472730,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562960448477,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3092443621,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562957507593,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3091669390,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562875780133,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3091644784,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562873325258,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3090983147,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562800220740,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3090894289,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562792948167,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3090814562,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562787178935,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3090767368,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562784791242,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3087934768,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562524254655,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3086708803,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562434937481,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3086721503,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562433308555,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3085839571,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562354361914,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3085841430,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562352454274,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3085011127,
+      "champion": 141,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562267946177,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3084964790,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562266023259,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3084955750,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562264043494,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3084026922,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562203907600,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3083995073,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562201894054,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3083971560,
+      "champion": 38,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562199629792,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3083643587,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562173419179,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3083628658,
+      "champion": 55,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562171878181,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3082933730,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562108424571,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3082902250,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562106168548,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3081668326,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562005900329,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3081589420,
+      "champion": 105,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1562003237375,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3080407321,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561925406726,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3080329740,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561920332317,
+      "role": "DUO_CARRY",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3077292022,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561692695530,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3076952174,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561677059301,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3076757631,
+      "champion": 145,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561666418378,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3076713749,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561664100083,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3076552928,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561649963157,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3075873335,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561584117841,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3075799454,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561578771357,
+      "role": "DUO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3074791557,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561492062396,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3074774275,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561489824689,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3074769881,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561487967240,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3074752777,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561485872950,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3074712230,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561479066371,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3074697234,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561477305458,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3074282397,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561420057511,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3074102461,
+      "champion": 142,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561399028527,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3074068030,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561393064005,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3074039683,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561387001909,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3074049844,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561385088895,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3073221428,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561318938246,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3073194644,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561316686951,
+      "role": "DUO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3073167108,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561313988388,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3073170113,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561311683241,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3073127085,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561306528417,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3071813670,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561132511800,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3071012306,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561056756319,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3070979233,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1561054305346,
+      "role": "SOLO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3070312145,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1560958356938,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3070294017,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1560953562831,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3070108826,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1560917921405,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3070100455,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1560915935514,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3070064577,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1560914578686,
+      "role": "DUO",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3069477058,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1560884480833,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3069473843,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1560883043479,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3049213991,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558627574688,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3049039033,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558587806988,
+      "role": "DUO_SUPPORT",
+      "lane": "NONE"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3048989562,
+      "champion": 7,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558584812364,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3048979187,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558583051262,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3048960387,
+      "champion": 112,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558580780458,
+      "role": "DUO",
+      "lane": "TOP"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3048635415,
+      "champion": 202,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558549855636,
+      "role": "DUO_CARRY",
+      "lane": "BOTTOM"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3048631224,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558547559222,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3048421738,
+      "champion": 84,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558499830279,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3048170056,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558481170372,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3048160593,
+      "champion": 238,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558479216008,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3048114919,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558476762908,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3046481293,
+      "champion": 91,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558296171544,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3046463751,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558294210395,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3045398664,
+      "champion": 4,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558204220281,
+      "role": "SOLO",
+      "lane": "MID"
+    },
+    {
+      "platformId": "NA1",
+      "gameId": 3045410933,
+      "champion": 64,
+      "queue": 420,
+      "season": 13,
+      "timestamp": 1558202086019,
+      "role": "NONE",
+      "lane": "JUNGLE"
+    }
+  ]
+}

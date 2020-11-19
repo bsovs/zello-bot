@@ -144,7 +144,7 @@ module.exports = {
         message.channel.send(description);
     },
     to(message, user, description) {
-        message.channel.send(user, description);
+        message.reply(description);
     },
     editLink(message) {
         message.channel.send(message.author.toString() + ' Gyazo is Deprecated, Please use ⌘+⇧+S', {files: [message.embeds[0].thumbnail.url]});
