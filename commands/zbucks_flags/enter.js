@@ -3,10 +3,12 @@ const database = require('../../database');
 const {getRandomInt} = require("../../express/helper/helper");
 
 module.exports = {
+    excluded: true,
     name: 'enter',
     description: 'Buy a raffle ticket for 250 z-bucks.',
     claimAmount: 250,
     execute(message, args, parent) {
+        return;
         const claimAmount = module.exports.claimAmount;
         database.find('zbucks', {"id": message.author.id}).then(account => {
             if (!account) account = parent.newAccount(message);
