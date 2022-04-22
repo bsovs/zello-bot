@@ -1,3 +1,4 @@
 #!/bin/bash
+#npm run build
 heroku git:remote -a zellobot
-git push heroku master:main
+git push heroku test:main

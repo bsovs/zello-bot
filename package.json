@@ -53,8 +53,8 @@
     "data-test": "node ./express/lol/dataTester"
   },
   "engines" : {
-    "npm" : ">=7.0.0",
-    "node" : "^16.13.0"
+    "npm" : "8.1.0",
+    "node" : "16.13.0"
   },
   "eslintConfig": {
     "extends": "react-app"
