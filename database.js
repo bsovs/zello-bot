@@ -8,7 +8,7 @@ module.exports = {
     description: 'Connect to MongoDB',
     client: null,
     connect() {
-        const uri = `mongodb+srv://sovranb:${DB_PASS}@cluster0.ovjzi.mongodb.net/Cluster0?retryWrites=true&w=majority`;
+        const uri = `${DB_PASS}?retryWrites=true&w=majority`;
         const client = new MongoClient(uri, {useNewUrlParser: true, useUnifiedTopology: true});
         return new Promise((resolve, reject) =>
             client.connect(error => {
