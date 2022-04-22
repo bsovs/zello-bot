@@ -55,6 +55,10 @@ const start = () => {
             }
         });
         if (message.author.bot) return;
+
+        if(message.attachments.size > 0)
+            database.add('images', {'url': message.attachments.array()[0].url});
+
         if (!message.content.startsWith(prefix)) return;
 
         const commandBody = message.content.slice(prefix.length);
