@@ -16,6 +16,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.20.0",
+    "bad-words": "^3.0.4",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.2",
     "capacitor": "^0.5.5",
@@ -52,9 +53,9 @@
     "data-fetch": "node ./express/lol/dataPreper",
     "data-test": "node ./express/lol/dataTester"
   },
-  "engines" : {
-    "npm" : "8.1.0",
-    "node" : "16.13.0"
+  "engines": {
+    "npm": "8.1.0",
+    "node": "16.13.0"
   },
   "eslintConfig": {
     "extends": "react-app"

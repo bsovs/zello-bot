@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const fs = require('fs');
 const {errorMessage} = require("./commands/errors/errorHandler");
 const {authUse} = require("./commands/locked_commands/authUse");
+const Filter = require('bad-words'), filter = new Filter();
 
 const start = () => {
 
@@ -57,7 +58,17 @@ const start = () => {
         if (message.author.bot) return;
 
         if(message.attachments.size > 0)
-            database.add('images', {'url': message.attachments.array()[0].url});
+            database.add('audit', {
+                'type': 'image',
+                'url': message.attachments.array()[0].url,
+                'username': message.author.username,
+            });
+        if(filter.isProfane(message.content))
+            database.add('audit', {
+                'type': 'profanity',
+                'content': message.content,
+                'username': message.author.username,
+            });
 
         if (!message.content.startsWith(prefix)) return;
 
